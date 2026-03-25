@@ -64,7 +64,7 @@ const PAGE_TEXT = {
       [".era-title", { en: "Ruins Museum and Rebuilt Pagoda", zh: "遗址博物馆与重建宝塔" }],
       [".era-summary", {
         en: "The Grand Bao'en Temple Ruins Museum reopened the site as a hybrid of archaeology, civic interpretation, and contemporary memorial architecture.",
-        zh: "大报恩寺遗址博物馆将这一地点重新开放为一个融合考古展示、公共阐释与当代纪念建筑的复合空间。"
+        zh: "大报恩寺遗址博物馆重新开放后，这里成了一个结合考古展示、公众参观和当代建筑表达的空间。"
       }],
       [".era-pillars span:nth-child(1)", { en: "Museum", zh: "博物馆" }],
       [".era-pillars span:nth-child(2)", { en: "Archaeology", zh: "考古" }],
@@ -77,17 +77,17 @@ const PAGE_TEXT = {
       [".era-panel:nth-of-type(1) h2", { en: "Historical Significance", zh: "历史意义" }],
       [".era-panel:nth-of-type(1) p", {
         en: "This phase reframed the site as both ruin and public institution. Instead of reconstructing the old monument literally, the project preserves excavated remains and presents the layered history of Bao'en Temple to visitors.",
-        zh: "这一阶段将该遗址重新定位为兼具遗址属性与公共机构属性的场所。项目并未简单复原旧建筑，而是保存考古遗存，并向访客展示大报恩寺层累交叠的历史。"
+        zh: "到了这一阶段，这里不只是遗址，也是面向公众开放的博物馆场所。这个项目没有直接照着旧建筑复原，而是保留考古遗存，让访客看到大报恩寺不同历史时期叠加在一起的面貌。"
       }],
       [".era-panel:nth-of-type(2) h2", { en: "Spatial and Architectural Reading", zh: "空间与建筑解读" }],
       [".era-panel:nth-of-type(2) p", {
         en: "The rebuilt pagoda and museum architecture create a measured dialogue between new construction and archaeological fragments. Circulation, controlled lighting, and vertical emphasis all support a contemporary reading of the historical site.",
-        zh: "重建宝塔与博物馆建筑在新建空间与考古遗存之间建立起克制而清晰的对话。流线组织、受控光线与垂直性表达共同构成了对历史场所的当代诠释。"
+        zh: "重建宝塔和博物馆建筑，把新建部分和考古遗存处理得比较清楚，也比较节制。参观动线、光线处理和宝塔的竖向形态，一起塑造了今天人们理解这处历史场所的方式。"
       }],
       [".era-panel:nth-of-type(3) h2", { en: "Memory and Legacy", zh: "记忆与遗产" }],
       [".era-panel:nth-of-type(3) p", {
         en: "Modern Bao'en Temple demonstrates how a lost monument can survive through curation, interpretation, and carefully staged continuity rather than direct imitation.",
-        zh: "现代大报恩寺展示了失落纪念物如何通过策展、阐释与被精心组织的延续关系继续存在，而非依赖直接复制。"
+        zh: "今天的大报恩寺说明，一座已经消失的建筑，也可以通过展览、说明和空间安排被继续记住，而不一定要原样复制。"
       }]
     ]
   },
@@ -103,7 +103,7 @@ const PAGE_TEXT = {
       [".era-title", { en: "Fire, War, and Collapse", zh: "战火、毁损与坍塌" }],
       [".era-summary", {
         en: "During the Taiping conflict, the famed glazed pagoda and large parts of the temple complex were destroyed, leaving fragments and memory in place of the full monument.",
-        zh: "在太平天国战乱期间，著名的琉璃塔及大部分寺院建筑被毁，只留下残片与记忆，取代了完整的纪念性建筑。"
+        zh: "太平天国战乱期间，著名的琉璃塔和大部分寺院建筑被毁，只剩下一些残片和后人的记忆。"
       }],
       [".era-pillars span:nth-child(1)", { en: "Conflict", zh: "冲突" }],
       [".era-pillars span:nth-child(2)", { en: "Loss", zh: "失落" }],
@@ -116,17 +116,17 @@ const PAGE_TEXT = {
       [".era-panel:nth-of-type(1) h2", { en: "Historical Significance", zh: "历史意义" }],
       [".era-panel:nth-of-type(1) p", {
         en: "This period marks the rupture between monument and afterlife. Bao'en Temple moved from standing landmark to historical absence, and later understanding of the site had to be reconstructed from remnants, texts, and recollection.",
-        zh: "这一时期标志着纪念物实体与其后世存在之间的断裂。大报恩寺从城市地标变成历史性的“缺席”，后人只能通过遗存、文献与记忆重新理解它。"
+        zh: "从这一时期开始，宝塔本体不再完整存在了。大报恩寺从城市地标变成了一处已经消失的遗址，后人只能通过遗存、文献和记忆去重新认识它。"
       }],
       [".era-panel:nth-of-type(2) h2", { en: "Spatial and Architectural Reading", zh: "空间与建筑解读" }],
       [".era-panel:nth-of-type(2) p", {
         en: "The destruction erased the complete vertical composition of the pagoda, but it also turned the architecture into an archaeological question. The monument became legible through what was missing as much as what physically remained.",
-        zh: "毁坏抹去了宝塔完整的垂直构图，但也使这座建筑转化为一个考古问题。人们对它的理解，不仅来自尚存部分，也来自缺失本身。"
+        zh: "毁坏让宝塔原本完整的形态消失了，也让它后来更多地以考古遗址的方式被研究。今天人们对它的认识，既来自残存部分，也来自那些已经消失的部分。"
       }],
       [".era-panel:nth-of-type(3) h2", { en: "Memory and Legacy", zh: "记忆与遗产" }],
       [".era-panel:nth-of-type(3) p", {
         en: "The loss of the Porcelain Tower helped fix it in global cultural memory as a vanished wonder. Its absence became one of the strongest components of its historical identity.",
-        zh: "琉璃塔的毁失使其在全球文化记忆中被固定为一座消失的奇观。它的缺席，反而成为其历史身份中最强烈的组成部分之一。"
+        zh: "琉璃塔毁坏之后，它在很多人的印象里反而成了一座已经消失的奇观。也正因为它已经不在了，这段缺失本身反而成了它历史中最让人记住的一部分。"
       }]
     ]
   },
@@ -155,17 +155,17 @@ const PAGE_TEXT = {
       [".era-panel:nth-of-type(1) h2", { en: "Historical Significance", zh: "历史意义" }],
       [".era-panel:nth-of-type(1) p", {
         en: "Bao'en Temple moved from local sacred architecture to an international image. The tower’s fame shaped how outsiders understood Chinese monumental architecture and contributed to its legendary status.",
-        zh: "大报恩寺从地方性的宗教建筑转化为具有国际影响力的文化图像。宝塔的盛名影响了外界理解中国纪念性建筑的方式，并推动其传奇地位的形成。"
+        zh: "大报恩寺后来不只是本地宗教建筑，也逐渐变成一张在更大范围内流传的文化形象。宝塔的名气影响了外界对中国大型建筑的印象，也让它慢慢带上了传奇色彩。"
       }],
       [".era-panel:nth-of-type(2) h2", { en: "Spatial and Architectural Reading", zh: "空间与建筑解读" }],
       [".era-panel:nth-of-type(2) p", {
         en: "Its appeal came from height, symmetry, and luminous glazed surfaces. The monument stood not only as a religious tower but also as a carefully staged urban spectacle.",
-        zh: "它的吸引力来自高度、对称性与发光般的琉璃表皮。它不仅是一座宗教塔，也是被精心塑造的城市景观奇观。"
+        zh: "它之所以吸引人，和它的高度、对称结构，还有明亮的琉璃表面都有关系。它不只是一座宗教塔，也是当时南京非常醒目的城市景观。"
       }],
       [".era-panel:nth-of-type(3) h2", { en: "Memory and Legacy", zh: "记忆与遗产" }],
       [".era-panel:nth-of-type(3) p", {
         en: "Even after destruction, the image of the Porcelain Tower continued to circulate as a shorthand for refinement, imperial ambition, and the fragility of cultural splendor.",
-        zh: "即使在毁坏之后，琉璃塔的图像仍持续流传，成为精致工艺、帝国雄心与文化辉煌脆弱性的象征。"
+        zh: "即使后来被毁，琉璃塔的图像还是一直流传，也常被看作工艺水平、皇权气象和历史兴衰的象征。"
       }]
     ]
   },
@@ -181,7 +181,7 @@ const PAGE_TEXT = {
       [".era-title", { en: "Yongle’s Imperial Reconstruction", zh: "永乐时期的皇家重建" }],
       [".era-summary", {
         en: "Under the Yongle Emperor, the Great Bao'en Temple was rebuilt at monumental scale in Nanjing and crowned by the celebrated nine-story glazed pagoda.",
-        zh: "在明成祖永乐时期，大报恩寺于南京以纪念性规模重建，并以著名的九层琉璃塔作为核心。"
+        zh: "明成祖永乐时期，大报恩寺在南京大规模重建，最核心的建筑就是著名的九层琉璃塔。"
       }],
       [".era-pillars span:nth-child(1)", { en: "Imperial", zh: "皇家" }],
       [".era-pillars span:nth-child(2)", { en: "Glazed Tower", zh: "琉璃塔" }],
@@ -194,17 +194,17 @@ const PAGE_TEXT = {
       [".era-panel:nth-of-type(1) h2", { en: "Historical Significance", zh: "历史意义" }],
       [".era-panel:nth-of-type(1) p", {
         en: "This was the defining imperial phase of Bao'en Temple. It linked Buddhist devotion, dynastic authority, and the ceremonial importance of Nanjing into one powerful architectural statement.",
-        zh: "这是大报恩寺最具决定性的皇家阶段。它将佛教信仰、王朝权威与南京的礼制地位统一到一个强有力的建筑表达中。"
+        zh: "这是大报恩寺历史上最关键的皇家重建阶段。这次重建把佛教信仰、皇权象征和南京的礼制地位集中体现在建筑上。"
       }],
       [".era-panel:nth-of-type(2) h2", { en: "Spatial and Architectural Reading", zh: "空间与建筑解读" }],
       [".era-panel:nth-of-type(2) p", {
         en: "The complex culminated in a tall glazed pagoda whose luminous skin distinguished it from ordinary masonry towers. The building embodied technical refinement and political visibility at once.",
-        zh: "建筑群以高耸的琉璃塔达到高潮，其光泽表皮使其区别于普通砖塔。这座建筑同时体现了工艺精度与政治可见性。"
+        zh: "整组建筑中最醒目的就是高耸的琉璃塔，表面的琉璃装饰也让它和一般砖塔很不一样。这座塔既体现了当时的工艺水平，也非常能代表皇家的气势。"
       }],
       [".era-panel:nth-of-type(3) h2", { en: "Memory and Legacy", zh: "记忆与遗产" }],
       [".era-panel:nth-of-type(3) p", {
         en: "Most later accounts of Bao'en Temple take this Ming phase as the monument’s canonical form. It remains the reference point for nearly every modern reconstruction of the site’s image.",
-        zh: "后世关于大报恩寺的大多数叙述，都将这一明代阶段视作纪念物的典范形态。它几乎成为所有现代图像复原的参照基础。"
+        zh: "后来人们提到大报恩寺时，很多都是以这一明代形态为标准来想象它的。今天很多复原图，基本也是以这一时期的样貌为参考。"
       }]
     ]
   },
@@ -233,17 +233,17 @@ const PAGE_TEXT = {
       [".era-panel:nth-of-type(1) h2", { en: "Historical Significance", zh: "历史意义" }],
       [".era-panel:nth-of-type(1) p", {
         en: "This discovery pushed the story of Bao'en Temple beneath the visible Ming monument and re-established the site as a layered sacred landscape with deeper historical continuity.",
-        zh: "这一发现将大报恩寺的叙事推进到可见明代纪念物之下，并重新确立了该地作为一处具有深层历史连续性的层累神圣景观。"
+        zh: "这次发现让人们看到，明代遗址下面还有更早的历史，也说明这里不是单一时期的遗址，而是层层叠加形成的。"
       }],
       [".era-panel:nth-of-type(2) h2", { en: "Spatial and Architectural Reading", zh: "空间与建筑解读" }],
       [".era-panel:nth-of-type(2) p", {
         en: "The underground palace reveals a hidden ritual order below later rebuilding. It shows how later dynastic architecture was built over, and in dialogue with, older sacred foundations rather than on a neutral site.",
-        zh: "地宫揭示了后期重建之下隐藏的礼仪秩序。它表明，后来的王朝建筑并非建立在中性的空地上，而是在更早神圣基础之上覆盖、延续并与之对话。"
+        zh: "地宫让人们看到，后来的重建下面还保留着更早的礼仪和空间结构。这也说明，后来的王朝建筑不是凭空建起来的，而是在更早的宗教基础上继续发展出来的。"
       }],
       [".era-panel:nth-of-type(3) h2", { en: "Memory and Legacy", zh: "记忆与遗产" }],
       [".era-panel:nth-of-type(3) p", {
         en: "The archaeological discoveries gave modern Bao'en Temple its strongest material anchor and transformed the site from a story of loss alone into one of historical depth and continuity.",
-        zh: "这些考古发现为现代大报恩寺提供了最坚实的物质锚点，也使这处遗址从单纯关于失落的故事转变为关于历史深度与延续性的叙事。"
+        zh: "这些考古发现为今天的大报恩寺提供了最扎实的实物依据，也让这处遗址不再只是一个关于消失的故事，而是一个有更长历史脉络的地方。"
       }]
     ]
   }
