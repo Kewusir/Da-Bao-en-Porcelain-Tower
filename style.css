@@ -744,3 +744,81 @@ body::before {
     display: none;
   }
 }
+.lang-switch {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 200;
+}
+
+.lang-switch-button {
+  appearance: none;
+  border: 1px solid rgba(239, 231, 214, 0.12);
+  border-radius: 999px;
+  background: rgba(20, 18, 16, 0.92);
+  color: var(--ink);
+  cursor: pointer;
+  min-width: 88px;
+  padding: 12px 16px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: var(--shadow);
+}
+
+.lang-switch-button::after {
+  content: " \2304";
+  font-size: 0.78rem;
+}
+
+.lang-switch-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  display: grid;
+  gap: 6px;
+  min-width: 140px;
+  padding: 8px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 18px;
+  background: rgba(20, 18, 16, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.lang-switch-menu[hidden] {
+  display: none;
+}
+
+.lang-switch-menu button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  padding: 10px 12px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.88rem;
+}
+
+.lang-switch-menu button:hover,
+.lang-switch-menu button[data-active="true"] {
+  color: var(--ink);
+  border-color: rgba(239, 231, 214, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 640px) {
+  .lang-switch {
+    top: 12px;
+    right: 12px;
+  }
+
+  .lang-switch-button {
+    min-width: 76px;
+    padding: 10px 14px;
+  }
+}
+
