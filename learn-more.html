@@ -15,7 +15,24 @@
           <a href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
           <a class="active" aria-current="page" href="./learn-more.html" data-i18n="nav_learn_more">Learn More</a>
           <a href="./visitor-experience.html" data-i18n="nav_visitor_experience">Visitor Experience</a>
-          <span class="top-nav-lang top-nav-lang-static" id="lang-current" aria-label="Current language">EN</span>
+
+          <div class="lang-dropdown">
+            <button
+              class="top-nav-lang"
+              id="lang-toggle"
+              type="button"
+              aria-label="Language switcher"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EN
+            </button>
+
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button type="button" class="lang-option" data-lang="en">English</button>
+              <button type="button" class="lang-option" data-lang="zh">中文</button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
