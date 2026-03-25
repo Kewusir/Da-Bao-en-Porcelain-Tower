@@ -1021,4 +1021,44 @@ body::before {
     font-size: clamp(2.5rem, 13vw, 4.3rem);
   }
 }
+.hero,
+.info-header {
+  overflow: visible;
+}
+
+.hero {
+  z-index: 40;
+}
+
+.info-header {
+  z-index: 40;
+}
+
+.site-nav {
+  position: relative;
+  z-index: 60;
+}
+
+.top-nav {
+  position: relative;
+  overflow: visible;
+}
+
+.lang-dropdown {
+  position: relative;
+  z-index: 300;
+}
+
+.lang-menu {
+  z-index: 400;
+}
+
+.top-nav-lang-static {
+  cursor: default;
+  pointer-events: none;
+}
+
+.top-nav-lang-static::after {
+  content: "";
+}
 
