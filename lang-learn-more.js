@@ -74,7 +74,9 @@ const translations = {
 };
 
 const storageKey = "dabaoen-lang";
-const langCurrent = document.getElementById("lang-current");
+const langToggle = document.getElementById("lang-toggle");
+const langMenu = document.getElementById("lang-menu");
+const langOptions = document.querySelectorAll(".lang-option");
 
 function setLanguage(lang) {
   const dict = translations[lang] || translations.en;
@@ -90,10 +92,49 @@ function setLanguage(lang) {
     }
   });
 
-  if (langCurrent) {
-    langCurrent.textContent = lang === "zh" ? "中文" : "EN";
+  if (langToggle) {
+    langToggle.textContent = lang === "zh" ? "中文" : "EN";
   }
 }
 
+function openMenu() {
+  if (!langMenu || !langToggle) return;
+  langMenu.hidden = false;
+  langToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeMenu() {
+  if (!langMenu || !langToggle) return;
+  langMenu.hidden = true;
+  langToggle.setAttribute("aria-expanded", "false");
+}
+
+if (langToggle) {
+  langToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    if (langMenu.hidden) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  });
+}
+
+langOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedLang = option.dataset.lang;
+    setLanguage(selectedLang);
+    closeMenu();
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".lang-dropdown")) {
+    closeMenu();
+  }
+});
+
 const savedLang = localStorage.getItem(storageKey) || "en";
 setLanguage(savedLang);
+closeMenu();
