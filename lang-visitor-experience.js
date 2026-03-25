@@ -74,7 +74,6 @@ const langOptions = document.querySelectorAll(".lang-option");
 
 function setLanguage(lang) {
   const dict = translations[lang] || translations.en;
-
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
   document.title = dict._title;
   localStorage.setItem(storageKey, lang);
@@ -103,8 +102,9 @@ function closeMenu() {
   langToggle.setAttribute("aria-expanded", "false");
 }
 
-if (langToggle) {
+if (langToggle && langMenu) {
   langToggle.addEventListener("click", (event) => {
+    event.preventDefault();
     event.stopPropagation();
 
     if (langMenu.hidden) {
@@ -116,7 +116,9 @@ if (langToggle) {
 }
 
 langOptions.forEach((option) => {
-  option.addEventListener("click", () => {
+  option.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     setLanguage(option.dataset.lang);
     closeMenu();
   });
