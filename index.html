@@ -15,36 +15,52 @@
   </head>
   <body>
     <header class="hero">
-  <div class="site-nav">
-    <div class="brand-mark">Nanjing | Da Bao'en Temple</div>
+      <div class="site-nav">
+        <div class="brand-mark" data-i18n="brand_mark">Nanjing | Da Bao'en Temple</div>
 
-    <nav class="top-nav" aria-label="Primary navigation">
-      <a class="active" aria-current="page" href="./index.html">Historical Timeline</a>
-      <a href="./learn-more.html">Learn More</a>
-      <a href="./visitor-experience.html">Visitor Experience</a>
-      <button class="top-nav-lang" type="button" aria-label="Current language is English">
-        EN
-      </button>
-    </nav>
-  </div>
+        <nav class="top-nav" aria-label="Primary navigation">
+          <a class="active" aria-current="page" href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
+          <a href="./learn-more.html" data-i18n="nav_learn_more">Learn More</a>
+          <a href="./visitor-experience.html" data-i18n="nav_visitor_experience">Visitor Experience</a>
 
-  <h1>Porcelain Tower Timeline</h1>
-</header>
+          <div class="lang-dropdown">
+            <button
+              class="top-nav-lang"
+              id="lang-toggle"
+              type="button"
+              aria-label="Language switcher"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EN
+            </button>
 
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button type="button" class="lang-option" data-lang="en">English</button>
+              <button type="button" class="lang-option" data-lang="zh">中文</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <h1 data-i18n="hero_title">Porcelain Tower Timeline</h1>
+    </header>
 
     <main class="timeline-board">
       <div class="tower-column">
         <div class="tower-sticky">
-          <div class="axis-label axis-label-top">2025 Museum Era</div>
+          <div class="axis-label axis-label-top" data-i18n="axis_top">2025 Museum Era</div>
           <div class="scene-wrap">
             <canvas id="tower-canvas" aria-label="Interactive 3D temple timeline"></canvas>
-            <div class="scene-status" id="scene-status">Initializing 3D tower...</div>
+            <div class="scene-status" id="scene-status" data-i18n="scene_status_initial">
+              Initializing 3D tower...
+            </div>
             <div class="stage-overlay">
-              <div class="overlay-chip">Hover tower to tilt</div>
-              <div class="overlay-chip">Click tower to follow history</div>
+              <div class="overlay-chip" data-i18n="overlay_hover">Hover tower to tilt</div>
+              <div class="overlay-chip" data-i18n="overlay_click">Click tower to follow history</div>
             </div>
           </div>
-          <div class="axis-label axis-label-bottom">1011 Underground Palace</div>
+          <div class="axis-label axis-label-bottom" data-i18n="axis_bottom">1011 Underground Palace</div>
         </div>
       </div>
 
@@ -55,27 +71,27 @@
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year">2015 to 2025</p>
-            <h2>Ruins Museum and Rebuilt Pagoda</h2>
-            <p class="card-copy">
+            <p class="card-year" data-i18n="present_year">2015 to 2025</p>
+            <h2 data-i18n="present_title">Ruins Museum and Rebuilt Pagoda</h2>
+            <p class="card-copy" data-i18n="present_copy">
               The Grand Bao'en Temple Ruins Museum and heritage park reopened the site to the
               public, pairing a new pagoda structure with preserved archaeological remains,
               exhibitions, and the underground palace.
             </p>
-            <a class="era-button" href="./present.html">Explore this era</a>
+            <a class="era-button" href="./present.html" data-i18n="explore_button">Explore this era</a>
           </section>
         </article>
 
         <article class="timeline-row row-left" data-era="industrial" style="--accent: #6f8a8f;">
           <section class="timeline-card">
-            <p class="card-year">1856 to 1864</p>
-            <h2>Fire, War, and Collapse</h2>
-            <p class="card-copy">
+            <p class="card-year" data-i18n="industrial_year">1856 to 1864</p>
+            <h2 data-i18n="industrial_title">Fire, War, and Collapse</h2>
+            <p class="card-copy" data-i18n="industrial_copy">
               During the Taiping conflict, the famous glazed pagoda and the temple complex were
               devastated. What survived entered memory through drawings, fragments, and later
               archaeological excavation.
             </p>
-            <a class="era-button" href="./industrial.html">Explore this era</a>
+            <a class="era-button" href="./industrial.html" data-i18n="explore_button">Explore this era</a>
           </section>
           <button class="node-button" type="button" data-era-trigger="industrial" aria-label="Jump to industrial era">
             <span></span>
@@ -89,27 +105,27 @@
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year">15th to 19th century</p>
-            <h2>A Wonder Known Across the World</h2>
-            <p class="card-copy">
+            <p class="card-year" data-i18n="medieval_year">15th to 19th century</p>
+            <h2 data-i18n="medieval_title">A Wonder Known Across the World</h2>
+            <p class="card-copy" data-i18n="medieval_copy">
               The glazed tower of Nanjing became one of the city’s best-known landmarks and was
               widely described by foreign visitors, eventually earning a reputation as a medieval
               wonder in the Western imagination.
             </p>
-            <a class="era-button" href="./medieval.html">Explore this era</a>
+            <a class="era-button" href="./medieval.html" data-i18n="explore_button">Explore this era</a>
           </section>
         </article>
 
         <article class="timeline-row row-left" data-era="classical" style="--accent: #d0a85a;">
           <section class="timeline-card">
-            <p class="card-year">1412 to 1431</p>
-            <h2>Yongle’s Imperial Reconstruction</h2>
-            <p class="card-copy">
+            <p class="card-year" data-i18n="classical_year">1412 to 1431</p>
+            <h2 data-i18n="classical_title">Yongle’s Imperial Reconstruction</h2>
+            <p class="card-copy" data-i18n="classical_copy">
               Under the Yongle Emperor, the Great Bao'en Temple was rebuilt at extraordinary scale
               in Nanjing, crowned by the nine-story glazed pagoda later known in English as the
               Porcelain Tower.
             </p>
-            <a class="era-button" href="./classical.html">Explore this era</a>
+            <a class="era-button" href="./classical.html" data-i18n="explore_button">Explore this era</a>
           </section>
           <button class="node-button" type="button" data-era-trigger="classical" aria-label="Jump to classical era">
             <span></span>
@@ -123,14 +139,14 @@
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year">1011 and 2008</p>
-            <h2>Song Crypt Beneath the Ming Temple</h2>
-            <p class="card-copy">
+            <p class="card-year" data-i18n="ancient_year">1011 and 2008</p>
+            <h2 data-i18n="ancient_title">Song Crypt Beneath the Ming Temple</h2>
+            <p class="card-copy" data-i18n="ancient_copy">
               Beneath the later Ming complex lay the underground palace of the earlier Changgan
               Temple. Excavations in 2008 revealed a Northern Song crypt dated to 1011 and a famous
               Buddhist reliquary assemblage.
             </p>
-            <a class="era-button" href="./ancient.html">Explore this era</a>
+            <a class="era-button" href="./ancient.html" data-i18n="explore_button">Explore this era</a>
           </section>
         </article>
       </section>
@@ -138,9 +154,10 @@
 
     <div class="transition-screen" id="transition-screen" aria-hidden="true">
       <div class="transition-line"></div>
-      <div class="transition-title">Entering the era</div>
+      <div class="transition-title" data-i18n="transition_title">Entering the era</div>
     </div>
 
+    <script src="lang-index.js"></script>
     <script type="module" src="main.js?v=20260323b"></script>
   </body>
 </html>
