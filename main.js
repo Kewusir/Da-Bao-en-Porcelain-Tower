@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { OBJLoader } from "./assets/OBJLoader.js";
 
 const canvas = document.querySelector("#tower-canvas");
+const pageBody = document.body;
 const sceneWrap = document.querySelector(".scene-wrap");
 const sceneStatus = document.querySelector("#scene-status");
 const transitionScreen = document.querySelector("#transition-screen");
@@ -72,6 +73,14 @@ const focusBands = [];
 const loader = new OBJLoader();
 const clock = new THREE.Clock();
 let scrollAnimationFrame = 0;
+
+window.setTimeout(() => {
+  pageBody?.classList.add("is-ready");
+}, 80);
+
+window.setTimeout(() => {
+  pageBody?.classList.add("intro-done");
+}, 2100);
 
 if (location.protocol === "file:") {
   showSceneStatus("Please run this page with a local server. file:// blocks module and OBJ loading.");
