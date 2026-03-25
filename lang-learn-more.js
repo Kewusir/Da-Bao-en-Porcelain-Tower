@@ -123,8 +123,7 @@ if (langToggle) {
 
 langOptions.forEach((option) => {
   option.addEventListener("click", () => {
-    const selectedLang = option.dataset.lang;
-    setLanguage(selectedLang);
+    setLanguage(option.dataset.lang);
     closeMenu();
   });
 });
@@ -135,6 +134,5 @@ document.addEventListener("click", (event) => {
   }
 });
 
-const savedLang = localStorage.getItem(storageKey) || "en";
-setLanguage(savedLang);
+setLanguage(localStorage.getItem(storageKey) || "en");
 closeMenu();
