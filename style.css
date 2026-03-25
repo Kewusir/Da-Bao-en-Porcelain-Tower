@@ -1021,44 +1021,46 @@ body::before {
     font-size: clamp(2.5rem, 13vw, 4.3rem);
   }
 }
-.hero,
-.info-header {
-  overflow: visible;
-}
-
-.hero {
-  z-index: 40;
-}
-
-.info-header {
-  z-index: 40;
-}
-
-.site-nav {
-  position: relative;
-  z-index: 60;
-}
-
-.top-nav {
-  position: relative;
-  overflow: visible;
-}
-
 .lang-dropdown {
   position: relative;
-  z-index: 300;
 }
 
 .lang-menu {
-  z-index: 400;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  padding: 8px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 18px;
+  background: rgba(20, 18, 16, 0.96);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 6px;
+  z-index: 220;
 }
 
-.top-nav-lang-static {
-  cursor: default;
-  pointer-events: none;
+.lang-menu[hidden] {
+  display: none;
 }
 
-.top-nav-lang-static::after {
-  content: "";
+.lang-option {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  padding: 10px 12px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.88rem;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.lang-option:hover {
+  color: var(--ink);
+  border-color: rgba(239, 231, 214, 0.08);
+  background: rgba(255, 255, 255, 0.04);
 }
 
