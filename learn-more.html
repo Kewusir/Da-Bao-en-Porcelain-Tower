@@ -9,15 +9,30 @@
   <body class="info-page">
     <header class="info-header">
       <div class="site-nav">
-        <a class="brand-mark info-brand" href="./index.html">Nanjing | Da Bao'en Temple</a>
+        <a class="brand-mark info-brand" href="./index.html" data-i18n="brand_mark">Nanjing | Da Bao'en Temple</a>
 
-        <nav class="top-nav" aria-label="Primary">
-          <a href="./index.html">Historical Timeline</a>
-          <a class="active" aria-current="page" href="./learn-more.html">Learn More</a>
-          <a href="./visitor-experience.html">Visitor Experience</a>
-          <button class="top-nav-lang" type="button" aria-label="Current language: English">
-            EN
-          </button>
+        <nav class="top-nav" aria-label="Primary navigation">
+          <a href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
+          <a class="active" aria-current="page" href="./learn-more.html" data-i18n="nav_learn_more">Learn More</a>
+          <a href="./visitor-experience.html" data-i18n="nav_visitor_experience">Visitor Experience</a>
+
+          <div class="lang-dropdown">
+            <button
+              class="top-nav-lang"
+              id="lang-toggle"
+              type="button"
+              aria-label="Language switcher"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EN
+            </button>
+
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button type="button" class="lang-option" data-lang="en">English</button>
+              <button type="button" class="lang-option" data-lang="zh">中文</button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -25,9 +40,9 @@
     <main class="info-shell">
       <section class="info-hero">
         <div>
-          <p class="info-kicker">Learn More</p>
-          <h1 class="info-title">Visualizing the Dabao’en Temple</h1>
-          <p class="info-lead">
+          <p class="info-kicker" data-i18n="kicker">Learn More</p>
+          <h1 class="info-title" data-i18n="title">Visualizing the Dabao’en Temple</h1>
+          <p class="info-lead" data-i18n="lead">
             This page extends the historical timeline with background on the temple’s layered
             history, the Ming reconstruction, and the modern museum site. It works as a secondary
             navigation page without changing the 3D timeline on the mainpage.
@@ -35,24 +50,24 @@
         </div>
 
         <aside class="info-sidecard">
-          <p class="info-sidecard-label">Start Here</p>
-          <h2>Use the timeline as the primary entry point.</h2>
-          <p>
+          <p class="info-sidecard-label" data-i18n="side_label">Start Here</p>
+          <h2 data-i18n="side_title">Use the timeline as the primary entry point.</h2>
+          <p data-i18n="side_copy">
             Return to the Historical Timeline for the 3D tower and era navigation, then use the
             links below to move into deeper reading.
           </p>
 
           <div class="info-actions">
-            <a class="info-button" href="./index.html">Open Historical Timeline</a>
-            <a class="info-button" href="./era.html?era=classical">Open Ming Era Page</a>
+            <a class="info-button" href="./index.html" data-i18n="button_timeline">Open Historical Timeline</a>
+            <a class="info-button" href="./era.html?era=classical" data-i18n="button_ming">Open Ming Era Page</a>
           </div>
         </aside>
       </section>
 
       <section class="info-grid">
         <article class="info-panel">
-          <h2>Historical Layers</h2>
-          <p>
+          <h2 data-i18n="panel_1_title">Historical Layers</h2>
+          <p data-i18n="panel_1_copy">
             The site is best understood as a layered religious landscape rather than a single
             monument. Song-period remains, the Ming imperial temple, later destruction, and modern
             museum interpretation all coexist within one narrative.
@@ -60,23 +75,23 @@
         </article>
 
         <article class="info-panel">
-          <h2>Key Era Pages</h2>
-          <p>
+          <h2 data-i18n="panel_2_title">Key Era Pages</h2>
+          <p data-i18n="panel_2_copy">
             These links jump to focused reading pages for the major chronological moments already
             represented in the project.
           </p>
           <ul class="info-link-list">
-            <li><a href="./era.html?era=ancient">Song Crypt and Underground Palace</a></li>
-            <li><a href="./era.html?era=classical">Yongle’s Imperial Reconstruction</a></li>
-            <li><a href="./era.html?era=medieval">Global Fame of the Porcelain Tower</a></li>
-            <li><a href="./era.html?era=industrial">Destruction During War</a></li>
-            <li><a href="./era.html?era=present">Ruins Museum and Rebuilt Pagoda</a></li>
+            <li><a href="./era.html?era=ancient" data-i18n="link_ancient">Song Crypt and Underground Palace</a></li>
+            <li><a href="./era.html?era=classical" data-i18n="link_classical">Yongle’s Imperial Reconstruction</a></li>
+            <li><a href="./era.html?era=medieval" data-i18n="link_medieval">Global Fame of the Porcelain Tower</a></li>
+            <li><a href="./era.html?era=industrial" data-i18n="link_industrial">Destruction During War</a></li>
+            <li><a href="./era.html?era=present" data-i18n="link_present">Ruins Museum and Rebuilt Pagoda</a></li>
           </ul>
         </article>
 
         <article class="info-panel">
-          <h2>Spatial Reading</h2>
-          <p>
+          <h2 data-i18n="panel_3_title">Spatial Reading</h2>
+          <p data-i18n="panel_3_copy">
             The project can be framed around three spatial ideas: the vertical monument of the
             pagoda, the buried continuity of the underground palace, and the museum as a curated
             interface between archaeology and public memory.
@@ -84,18 +99,20 @@
         </article>
 
         <article class="info-panel">
-          <h2>Research Use</h2>
-          <p>
+          <h2 data-i18n="panel_4_title">Research Use</h2>
+          <p data-i18n="panel_4_copy">
             This navigation page is useful for readers who want context first before exploring the
             interactive timeline. It can later be expanded with citations, archival images, maps,
             or a glossary without disturbing the mainpage.
           </p>
-          <p class="info-note">
+          <p class="info-note" data-i18n="panel_4_note">
             Safe extension point: add more panels here later instead of rewriting the historical
             timeline homepage.
           </p>
         </article>
       </section>
     </main>
+
+    <script src="lang-learn-more.js"></script>
   </body>
 </html>
