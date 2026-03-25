@@ -59,7 +59,7 @@ const translations = {
     classical_year: "1412 至 1431",
     classical_title: "永乐时期的皇家重建",
     classical_copy:
-      "明成祖永乐年间，大报恩寺在南京大规模重建，核心建筑是九层琉璃塔。后来在英语世界里，它常被称为 ‘Porcelain Tower’。",
+      "明成祖永乐年间，大报恩寺在南京大规模重建，核心建筑是九层琉璃塔。后来在英语世界里，它常被称为 ‘Great Bao'en Temple’。",
     ancient_year: "1011 与 2008",
     ancient_title: "明代寺院之下的宋代地宫",
     ancient_copy:
