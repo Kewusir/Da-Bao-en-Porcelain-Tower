@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visitor Experience | Great Bao'en Temple</title>
-    <link rel="stylesheet" href="style.css?v=20260323b" />
+    <link rel="stylesheet" href="style.css?v=20260325a" />
   </head>
   <body class="info-page">
     <header class="info-header">
@@ -39,75 +39,64 @@
 
     <main class="info-shell">
       <section class="info-hero">
-        <div>
+        <div class="info-hero-copy">
           <p class="info-kicker" data-i18n="kicker">Visitor Experience</p>
-          <h1 class="info-title" data-i18n="title">Plan a Guided Journey Through the Site</h1>
+          <h1 class="info-title" data-i18n="title">Visitor Essentials</h1>
           <p class="info-lead" data-i18n="lead">
-            This page supports visitor-oriented navigation. It can introduce a recommended route,
-            highlight key moments to explore first, and funnel people back into the main historical
-            timeline and detailed era pages.
-          </p>
-        </div>
-
-        <aside class="info-sidecard">
-          <p class="info-sidecard-label" data-i18n="side_label">Recommended Start</p>
-          <h2 data-i18n="side_title">Begin with the 3D timeline, then move into details.</h2>
-          <p data-i18n="side_copy">
-            The mainpage remains the core experience. From there, visitors can branch into focused
-            reading about the crypt, the Ming pagoda, or the present-day museum.
+            A new page skeleton for practical visitor planning, with room to expand later.
           </p>
 
           <div class="info-actions">
             <a class="info-button" href="./index.html" data-i18n="button_timeline">Start at Timeline</a>
-            <a class="info-button" href="./era.html?era=present" data-i18n="button_museum">Open Museum Era</a>
+          </div>
+        </div>
+
+        <aside class="info-visual-card" aria-hidden="true">
+          <div class="info-visual-frame">
+            <img class="info-visual-image" src="./photos/Buddha.png" alt="" />
           </div>
         </aside>
       </section>
 
-      <section class="info-grid">
-        <article class="info-panel">
-          <h2 data-i18n="panel_1_title">Recommended Route</h2>
-          <p data-i18n="panel_1_copy">
-            Start with the Historical Timeline to understand the full chronology. Next, open the
-            Song crypt page for the buried origins of the site, then continue to the Ming
-            reconstruction and finally the present-day museum phase.
-          </p>
+      <section class="info-essentials-grid">
+        <article class="info-panel info-panel-tall">
+          <p class="info-panel-label" data-i18n="panel_1_label">Section Preview</p>
+          <h2 data-i18n="panel_1_title">Opening Information</h2>
         </article>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_2_title">Quick Access</h2>
-          <ul class="info-link-list">
-            <li><a href="./index.html" data-i18n="link_timeline">Interactive Historical Timeline</a></li>
-            <li><a href="./era.html?era=ancient" data-i18n="link_ancient">Underground Palace and Reliquary</a></li>
-            <li><a href="./era.html?era=classical" data-i18n="link_classical">Imperial Reconstruction</a></li>
-            <li><a href="./era.html?era=present" data-i18n="link_present">Ruins Museum</a></li>
-          </ul>
+        <article class="info-panel info-panel-map">
+          <p class="info-panel-label" data-i18n="panel_2_label">Section Preview</p>
+          <h2 data-i18n="panel_2_title">Map</h2>
+          <div class="info-map-preview" aria-hidden="true">
+            <div class="info-map-path"></div>
+            <div class="info-map-point info-map-point-a"></div>
+            <div class="info-map-point info-map-point-b"></div>
+            <div class="info-map-point info-map-point-c"></div>
+          </div>
         </article>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_3_title">Visitor Prompts</h2>
-          <p data-i18n="panel_3_copy">
-            Encourage users to compare what is visible above ground with what survives below ground,
-            and to think about how a lost monument can continue through excavation, reconstruction,
-            and exhibition design.
-          </p>
+        <article class="info-panel info-panel-access">
+          <p class="info-panel-label" data-i18n="panel_3_label">Section Preview</p>
+          <h2 data-i18n="panel_3_title">Accessibility</h2>
         </article>
+      </section>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_4_title">Future Expansion</h2>
-          <p data-i18n="panel_4_copy">
-            This page can later hold ticketing, opening information, maps, accessibility notes, or
-            gallery highlights. For now it works as a clean navigation layer that does not alter the
-            timeline page’s existing structure.
-          </p>
+      <section class="info-exhibition-section">
+        <article class="info-panel info-panel-exhibition">
+          <p class="info-panel-label" data-i18n="panel_4_label">Section Preview</p>
+          <h2 data-i18n="panel_4_title">Contemporary Exhibition Highlights</h2>
           <p class="info-note" data-i18n="panel_4_note">
-            Current safe scope: page-level navigation only, with no changes to your 3D rendering or
-            existing timeline interactions.
+            Reserved at the bottom for future image hosting blocks.
           </p>
+          <div class="info-gallery-reserve" aria-hidden="true">
+            <div class="info-gallery-slot"></div>
+            <div class="info-gallery-slot"></div>
+            <div class="info-gallery-slot"></div>
+          </div>
         </article>
       </section>
     </main>
 
-    <script src="lang-visitor-experience.js"></script>
+    <script src="lang-visitor-experience.js?v=20260325a"></script>
   </body>
 </html>
