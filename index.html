@@ -13,20 +13,21 @@
       }
     </script>
   </head>
+
   <body class="home-intro">
    
     <div class="intro-screen" aria-hidden="true">
-  <div class="intro-stack">
-    <img
-      class="intro-logo"
-      src="./assets/Logo.png"
-      alt="Great Bao'en Temple logo"
-    />
-    <p class="intro-kicker">Nanjing | Great Bao'en Temple</p>
-    <h1 class="intro-title">Porcelain Tower</h1>
-    <p class="intro-subtitle">大报恩寺琉璃塔</p>
+    <div class="intro-stack">
+      <img
+        class="intro-logo"
+        src="./assets/Logo.png"
+        alt="Great Bao'en Temple logo"
+      />
+      <p class="intro-kicker">Nanjing | Great Bao'en Temple</p>
+      <h1 class="intro-title">Porcelain Tower</h1>
+      <p class="intro-subtitle">大报恩寺琉璃塔</p>
+    </div>
   </div>
-</div>
 
 
 
@@ -65,18 +66,20 @@
     <main class="timeline-board">
       <div class="tower-column">
         <div class="tower-sticky">
-          <div class="axis-label axis-label-top" data-i18n="axis_top">2025 Museum Era</div>
+          <!-- kb: removed this label for simplicity -->
+          <!-- <div class="axis-label axis-label-top" data-i18n="axis_top">2025 Museum Era</div> -->
           <div class="scene-wrap">
             <canvas id="tower-canvas" aria-label="Interactive 3D temple timeline"></canvas>
             <div class="scene-status" id="scene-status" data-i18n="scene_status_initial">
               Initializing 3D tower...
             </div>
-            <div class="stage-overlay">
+            <!-- <div class="stage-overlay">
               <div class="overlay-chip" data-i18n="overlay_hover">Hover tower to tilt</div>
               <div class="overlay-chip" data-i18n="overlay_click">Click tower to follow history</div>
-            </div>
+            </div> -->
           </div>
-          <div class="axis-label axis-label-bottom" data-i18n="axis_bottom">1011 Underground Palace</div>
+          <!-- kb: removed this label for simplicity -->
+          <!-- <div class="axis-label axis-label-bottom" data-i18n="axis_bottom">1011 Underground Palace</div> -->
         </div>
       </div>
 
@@ -171,6 +174,13 @@
     <div class="transition-screen" id="transition-screen" aria-hidden="true">
       <div class="transition-line"></div>
       <div class="transition-title" data-i18n="transition_title">Entering the era</div>
+    </div>
+
+    <!-- Return to Top button -->
+    <div class="return-top-wrapper">
+      <button class="return-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        Return to Top
+      </button>
     </div>
 
     <footer class="site-footer">
