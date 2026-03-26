@@ -188,7 +188,7 @@ body::before {
   pointer-events: none;
 }
 
-.stage-overlay {
+/* .stage-overlay {
   position: absolute;
   left: 50%;
   bottom: 16px;
@@ -207,7 +207,7 @@ body::before {
   font-size: 0.78rem;
   white-space: nowrap;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-}
+} */
 
 .timeline-flow {
   position: relative;
@@ -329,6 +329,31 @@ body::before {
 }
 
 /*----------------------------- BUTTONS & INTERACTIONS ------------------------------*/
+
+.return-top-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0; 
+  /* border: 1px solid blue; */
+}
+
+.return-top {
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  background: var(--chip-bg);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.return-top:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
 
 .era-button,
 .node-button {
