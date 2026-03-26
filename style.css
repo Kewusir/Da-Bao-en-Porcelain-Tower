@@ -1186,6 +1186,57 @@ body::before {
   }
 }
 
+/*--------------------------------- SOURCES ----------------------------------*/
+
+.sources-page {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.sources-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.sources-title {
+  font-size: 2rem;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.sources-page h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.sources-page ul {
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.sources-page li {
+  margin-bottom: 6px;
+}
+
+.sources-page a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.sources-page a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
 /*-------------------------------- ANIMATIONS --------------------------------*/
 
 @keyframes menuReveal {
