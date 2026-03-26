@@ -1105,7 +1105,7 @@ body::before {
 }
 
 .footer-links a {
-  color: var(--muted);
+  color: var(--ink);
   text-decoration: none;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.82rem;
@@ -1115,7 +1115,7 @@ body::before {
 }
 
 .footer-links a:hover {
-  color: var(--ink);
+  color: var(--muted);
 }
 
 .footer-left {
@@ -1184,6 +1184,97 @@ body::before {
     align-items: flex-start;
     gap: 16px;
   }
+}
+
+/*--------------------------------- SOURCES ----------------------------------*/
+
+.sources-page {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.sources-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.sources-title {
+  font-size: 2rem;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.sources-page h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.sources-page ul {
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.sources-page li {
+  margin-bottom: 6px;
+}
+
+.sources-page a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.sources-page a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/*-------------------------------- CONTACT PAGE --------------------------------*/
+
+.contact-page {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 0 24px;
+}
+
+.contact-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contact-intro {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.contact-details p {
+  margin: 6px 0;
+}
+
+.contact-note {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 /*-------------------------------- ANIMATIONS --------------------------------*/
