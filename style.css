@@ -1230,8 +1230,10 @@ body::before {
 .intro-stack {
   text-align: center;
   padding: 24px;
+  margin-top: -90px;
   animation: introRise 1.4s ease forwards;
 }
+
 
 .intro-kicker {
   margin: 0 0 18px;
