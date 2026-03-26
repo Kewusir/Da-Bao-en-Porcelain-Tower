@@ -1237,6 +1237,46 @@ body::before {
   text-decoration: underline;
 }
 
+/*-------------------------------- CONTACT PAGE --------------------------------*/
+
+.contact-page {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 0 24px;
+}
+
+.contact-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contact-intro {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.contact-details p {
+  margin: 6px 0;
+}
+
+.contact-note {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 /*-------------------------------- ANIMATIONS --------------------------------*/
 
 @keyframes menuReveal {
