@@ -1454,3 +1454,12 @@ body::before {
     transform: translateY(0) scale(1);
   }
 }
+.intro-logo {
+  display: block;
+  width: min(140px, 22vw);
+  height: auto;
+  margin: 0 auto 18px;
+  object-fit: contain;
+  opacity: 0.96;
+  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.32));
+}
