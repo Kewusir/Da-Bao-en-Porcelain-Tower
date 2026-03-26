@@ -25,14 +25,14 @@ const eras = [
   },
   {
     id: "medieval",
-    color: "#a98d5d",
+    color: "#7c5cff",
     towerT: 0.5,
     hover: { x: THREE.MathUtils.degToRad(4), y: 0 },
     view: { x: 0.06, y: 0.02, zoom: 1.01 }
   },
   {
     id: "classical",
-    color: "#d0a85a",
+    color: "#3fbf6f",
     towerT: 0.31,
     hover: { x: THREE.MathUtils.degToRad(7), y: THREE.MathUtils.degToRad(8) },
     view: { x: 0.12, y: 0.08, zoom: 1.02 }
