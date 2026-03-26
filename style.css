@@ -1105,7 +1105,7 @@ body::before {
 }
 
 .footer-links a {
-  color: var(--muted);
+  color: var(--ink);
   text-decoration: none;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.82rem;
@@ -1115,7 +1115,7 @@ body::before {
 }
 
 .footer-links a:hover {
-  color: var(--ink);
+  color: var(--muted);
 }
 
 .footer-left {
