@@ -119,6 +119,132 @@
       </div>
     </footer>
 
+  <script>
+  (function () {
+    const translations = {
+      en: {
+        title: "Song Crypt Beneath the Ming Temple | Great Bao'en Temple",
+        back: "Back to timeline",
+        kicker: "from 1011 to 2008",
+        hero: "Song Crypt Beneath the Ming Temple",
+        intro:
+          "An archaeological reading of the hidden Song layer beneath the later Ming monument.",
+        overviewTitle: "Overview",
+        overviewCopy:
+          "Excavations in 2008 revealed the underground palace of the earlier Changgan Temple, including a Northern Song crypt dated to 1011 and an important reliquary assemblage.",
+        caption1:
+          "Bird’s-eye view of the foundation of the Porcelain Pagoda before excavation. From outer to inner parts: foundation slot, outer earth rim, sandwich stone rammed layer, inner earth rim, and crypt. Photo: courtesy of Zhou Baohua. Lines added by the author.",
+        significanceTitle: "Historical Significance",
+        significanceCopy:
+          "This discovery pushed the story of Great Bao'en Temple beneath the visible Ming monument and re-established the site as a layered sacred landscape with deeper historical continuity.",
+        caption2:
+          "The ruins of the Great Bao’en Temple on display (Source: photo courtesy of Pengfei Ma).",
+        spatialTitle: "Spatial and Architectural Reading",
+        spatialCopy:
+          "The underground palace reveals a hidden ritual order below later rebuilding. It shows how later dynastic architecture was built over, and in dialogue with, older sacred foundations rather than on a neutral site.",
+        caption3:
+          "The accompanying vintage photograph depicts the ruins of the Porcelain Tower of Nanjing, with illustrations dating to 1875 from the late Qing period. Originally part of the Great Bao'en Temple, this historical site is located on the south bank of the Outer Qinhuai River in Nanjing, China. The pagoda was constructed in the 15th century during the Ming dynasty, but was largely destroyed in the 19th century during the Taiping Rebellion. A modern, full-size replica now stands in Nanjing.",
+        archiveTitle: "Visual Archive",
+        memoryTitle: "Memory and Legacy",
+        memoryCopy:
+          "The archaeological discoveries gave modern Great Bao'en Temple its strongest material anchor and transformed the site from a story of loss alone into one of historical depth and continuity.",
+        sources: "Sources",
+        contact: "Contact"
+      },
+      zh: {
+        title: "明代寺院之下的宋代地宫 | 大报恩寺",
+        back: "返回时间线",
+        kicker: "1011年至2008年",
+        hero: "明代寺院之下的宋代地宫",
+        intro:
+          "这是一次对晚明纪念性建筑之下隐匿的宋代历史层的考古解读。",
+        overviewTitle: "概述",
+        overviewCopy:
+          "2008年的考古发掘揭示了更早期长干寺的地下宫殿，其中包括一座纪年为1011年的北宋地宫以及一组重要的舍利器组合。",
+        caption1:
+          "琉璃塔发掘前塔基的鸟瞰图。由外至内依次为：地槽、外土圈、夹石夯土层、内土圈与地宫。照片由周保华提供，线条为作者后加。",
+        significanceTitle: "历史意义",
+        significanceCopy:
+          "这项发现将大报恩寺的历史追溯到可见明代建筑之下，并重新确立了该遗址作为一处具有更深历史连续性的层累圣地景观。",
+        caption2:
+          "展陈中的大报恩寺遗址（图片来源：马鹏飞提供）。",
+        spatialTitle: "空间与建筑解读",
+        spatialCopy:
+          "地下宫殿揭示了后世重建之下隐蔽的仪式秩序。它表明，后来的王朝建筑并非建立在一块中性的空地之上，而是覆盖并回应着更早的神圣基础。",
+        caption3:
+          "这张历史照片展示了南京琉璃塔的遗址，附图年代可追溯至1875年的清末时期。琉璃塔原属大报恩寺，位于中国南京外秦淮河南岸。该塔建于明代十五世纪，但在十九世纪太平天国战争中大部分毁坏。如今南京已建有一座现代等比例复建塔。",
+        archiveTitle: "视觉档案",
+        memoryTitle: "记忆与遗产",
+        memoryCopy:
+          "这些考古发现为现代大报恩寺提供了最坚实的物质锚点，也使这处遗址从单纯关于失落的叙述，转变为关于历史深度与连续性的故事。",
+        sources: "资料来源",
+        contact: "联系方式"
+      }
+    };
+
+    const lang = localStorage.getItem("dabaoen-lang") || "en";
+    const dict = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = dict.title;
+
+    const textCards = document.querySelectorAll(".era-text-card");
+    const captions = document.querySelectorAll(".era-caption");
+    const footerLinks = document.querySelectorAll(".footer-links a");
+    const panels = document.querySelectorAll(".era-panel");
+
+    const back = document.querySelector(".era-back");
+    const kicker = document.querySelector(".era-kicker");
+    const hero = document.querySelector(".era-title");
+    const intro = document.querySelector(".era-intro-copy");
+    const archiveTitle = document.querySelector(".era-section-title");
+
+    if (back) back.textContent = dict.back;
+    if (kicker) kicker.textContent = dict.kicker;
+    if (hero) hero.textContent = dict.hero;
+    if (intro) intro.textContent = dict.intro;
+
+    if (textCards[0]) {
+      const h2 = textCards[0].querySelector("h2");
+      const p = textCards[0].querySelector("p");
+      if (h2) h2.textContent = dict.overviewTitle;
+      if (p) p.textContent = dict.overviewCopy;
+    }
+
+    if (captions[0]) captions[0].textContent = dict.caption1;
+
+    if (textCards[1]) {
+      const h2 = textCards[1].querySelector("h2");
+      const p = textCards[1].querySelector("p");
+      if (h2) h2.textContent = dict.significanceTitle;
+      if (p) p.textContent = dict.significanceCopy;
+    }
+
+    if (captions[1]) captions[1].textContent = dict.caption2;
+
+    if (textCards[2]) {
+      const h2 = textCards[2].querySelector("h2");
+      const p = textCards[2].querySelector("p");
+      if (h2) h2.textContent = dict.spatialTitle;
+      if (p) p.textContent = dict.spatialCopy;
+    }
+
+    if (captions[2]) captions[2].textContent = dict.caption3;
+    if (archiveTitle) archiveTitle.textContent = dict.archiveTitle;
+
+    if (panels[0]) {
+      const h2 = panels[0].querySelector("h2");
+      const p = panels[0].querySelector("p");
+      if (h2) h2.textContent = dict.memoryTitle;
+      if (p) p.textContent = dict.memoryCopy;
+    }
+
+    if (footerLinks[0]) footerLinks[0].textContent = dict.sources;
+    if (footerLinks[1]) footerLinks[1].textContent = dict.contact;
+  })();
+</script>
+
+
 </body>
 
 
