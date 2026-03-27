@@ -91,5 +91,161 @@
       </section>
     </main>
     <script src="image-lightbox.js?v=20260327b"></script>
+    
+    <script>
+  (function () {
+    const translations = {
+      en: {
+        title: "Ruins Museum and Rebuilt Pagoda | Great Bao'en Temple",
+        back: "Back to timeline",
+        kicker: "2015 to 2025",
+        hero: "Ruins Museum and Rebuilt Pagoda",
+        intro:
+          "A structured study of the museum-era site, contemporary reconstruction, and the ongoing public life of Bao'en Temple.",
+        overviewTitle: "Overview",
+        overviewCopy:
+          "The Grand Bao'en Temple Ruins Museum reopened the site as a hybrid of archaeology, civic interpretation, and contemporary memorial architecture.",
+        caption1: "Image 1.",
+        significanceTitle: "Historical Significance",
+        significanceCopy:
+          "This phase reframed the site as both ruin and public institution. Instead of reconstructing the old monument literally, the project preserves excavated remains and presents the layered history of Bao'en Temple to visitors.",
+        caption2: "Image 2.",
+        spatialTitle: "Spatial and Architectural Reading",
+        spatialCopy:
+          "The rebuilt pagoda and museum architecture create a measured dialogue between new construction and archaeological fragments. Circulation, controlled lighting, and vertical emphasis all support a contemporary reading of the historical site.",
+        caption3: "Image 3.",
+        archiveTitle: "Visual Archive",
+        memoryTitle: "Memory and Legacy",
+        memoryCopy:
+          "Modern Bao'en Temple demonstrates how a lost monument can survive through curation, interpretation, and carefully staged continuity rather than direct imitation.",
+        lightbox1Title: "Image 1",
+        lightbox1Desc:
+          "Interior museum view with contemporary exhibition lighting and display atmosphere.",
+        lightbox2Title: "Image 2",
+        lightbox2Desc:
+          "Daytime aerial-style view of the rebuilt pagoda and the surrounding museum complex.",
+        lightbox3Aria: "Open image 3",
+        lightbox3Alt: "Portrait view of the rebuilt pagoda.",
+        lightbox3Title: "Image 3",
+        lightbox3Desc:
+          "Portrait view of the rebuilt pagoda. In the popup, the full vertical image can be viewed."
+      },
+      zh: {
+        title: "遗址博物馆与重建宝塔 | 大报恩寺",
+        back: "返回时间线",
+        kicker: "2015年至2025年",
+        hero: "遗址博物馆与重建宝塔",
+        intro:
+          "这是对博物馆时代场地、当代重建以及大报恩寺持续公共生命的一种结构化研究。",
+        overviewTitle: "概述",
+        overviewCopy:
+          "大报恩寺遗址博物馆以考古遗址、市民阐释与当代纪念性建筑相结合的方式重新开放了这一场地。",
+        caption1: "图片1。",
+        significanceTitle: "历史意义",
+        significanceCopy:
+          "这一阶段将场地重新定义为既是遗址、也是公共机构。项目并未机械地复制旧有纪念物，而是保留发掘遗存，并向公众呈现大报恩寺层累的历史。",
+        caption2: "图片2。",
+        spatialTitle: "空间与建筑解读",
+        spatialCopy:
+          "重建宝塔与博物馆建筑在新建结构和考古碎片之间建立起一种克制的对话。流线组织、受控光线与垂直性的强调，共同支撑了对这一历史场地的当代解读。",
+        caption3: "图片3。",
+        archiveTitle: "视觉档案",
+        memoryTitle: "记忆与遗产",
+        memoryCopy:
+          "现代大报恩寺表明，一座失落的纪念物可以通过策展、阐释与精心建构的连续性而延续，而不必依赖直接模仿。",
+        lightbox1Title: "图片1",
+        lightbox1Desc:
+          "博物馆内部视角，展示了当代展陈照明与展示氛围。",
+        lightbox2Title: "图片2",
+        lightbox2Desc:
+          "重建宝塔及周边博物馆建筑群的白天视角。",
+        lightbox3Aria: "打开图片3",
+        lightbox3Alt: "重建宝塔的竖幅视图。",
+        lightbox3Title: "图片3",
+        lightbox3Desc:
+          "重建宝塔的竖幅视图。在弹窗中可以看到完整的竖向图像。"
+      }
+    };
+
+    const lang = localStorage.getItem("dabaoen-lang") || "en";
+    const dict = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = dict.title;
+
+    const textCards = document.querySelectorAll(".era-text-card");
+    const captions = document.querySelectorAll(".era-caption");
+    const panels = document.querySelectorAll(".era-panel");
+
+    const back = document.querySelector(".era-back");
+    const kicker = document.querySelector(".era-kicker");
+    const hero = document.querySelector(".era-title");
+    const intro = document.querySelector(".era-intro-copy");
+    const archiveTitle = document.querySelector(".era-section-title");
+
+    const image1 = document.querySelector('img[src="./photos/contemporary/1.jpg"]');
+    const image2 = document.querySelector('img[src="./photos/contemporary/2.jpeg"]');
+    const image3 = document.querySelector(".era-thumb-button");
+
+    if (back) back.textContent = dict.back;
+    if (kicker) kicker.textContent = dict.kicker;
+    if (hero) hero.textContent = dict.hero;
+    if (intro) intro.textContent = dict.intro;
+
+    if (textCards[0]) {
+      const h2 = textCards[0].querySelector("h2");
+      const p = textCards[0].querySelector("p");
+      if (h2) h2.textContent = dict.overviewTitle;
+      if (p) p.textContent = dict.overviewCopy;
+    }
+
+    if (captions[0]) captions[0].textContent = dict.caption1;
+
+    if (textCards[1]) {
+      const h2 = textCards[1].querySelector("h2");
+      const p = textCards[1].querySelector("p");
+      if (h2) h2.textContent = dict.significanceTitle;
+      if (p) p.textContent = dict.significanceCopy;
+    }
+
+    if (captions[1]) captions[1].textContent = dict.caption2;
+
+    if (textCards[2]) {
+      const h2 = textCards[2].querySelector("h2");
+      const p = textCards[2].querySelector("p");
+      if (h2) h2.textContent = dict.spatialTitle;
+      if (p) p.textContent = dict.spatialCopy;
+    }
+
+    if (captions[2]) captions[2].textContent = dict.caption3;
+    if (archiveTitle) archiveTitle.textContent = dict.archiveTitle;
+
+    if (panels[0]) {
+      const h2 = panels[0].querySelector("h2");
+      const p = panels[0].querySelector("p");
+      if (h2) h2.textContent = dict.memoryTitle;
+      if (p) p.textContent = dict.memoryCopy;
+    }
+
+    if (image1) {
+      image1.dataset.lightboxTitle = dict.lightbox1Title;
+      image1.dataset.lightboxDescription = dict.lightbox1Desc;
+    }
+
+    if (image2) {
+      image2.dataset.lightboxTitle = dict.lightbox2Title;
+      image2.dataset.lightboxDescription = dict.lightbox2Desc;
+    }
+
+    if (image3) {
+      image3.setAttribute("aria-label", dict.lightbox3Aria);
+      image3.dataset.lightboxAlt = dict.lightbox3Alt;
+      image3.dataset.lightboxTitle = dict.lightbox3Title;
+      image3.dataset.lightboxDescription = dict.lightbox3Desc;
+    }
+  })();
+</script>
+
+    
   </body>
 </html>
