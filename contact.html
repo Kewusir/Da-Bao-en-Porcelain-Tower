@@ -57,5 +57,80 @@
         </div>
       </div>
     </footer>
+
+    <script>
+  (function () {
+    const translations = {
+      en: {
+        title: "Contact | Porcelain Tower Project",
+        back: "← Back to Timeline",
+        pageTitle: "Contact",
+        intro1:
+          "This project was created as part of an academic exploration of the Porcelain Tower of Nanjing.",
+        intro2:
+          "For questions, feedback, or further information, please reach out:",
+        namesLabel: "Names:",
+        emailsLabel: "Emails:",
+        institutionLabel: "Institution:",
+        institutionValue: "Trinity College Dublin | Interactive Digital Media",
+        note: "This site is intended for educational purposes only.",
+        footerSources: "Sources",
+        footerContact: "Contact"
+      },
+      zh: {
+        title: "联系信息 | 琉璃塔项目",
+        back: "← 返回时间线",
+        pageTitle: "联系信息",
+        intro1:
+          "本项目作为对南京琉璃塔的学术探索而创建。",
+        intro2:
+          "如有问题、反馈或希望了解更多信息，请通过以下方式联系我们：",
+        namesLabel: "成员：",
+        emailsLabel: "邮箱：",
+        institutionLabel: "机构：",
+        institutionValue: "都柏林圣三一学院｜互动数字媒体",
+        note: "本网站仅用于教育用途。",
+        footerSources: "资料来源",
+        footerContact: "联系方式"
+      }
+    };
+
+    const lang = localStorage.getItem("dabaoen-lang") || "en";
+    const dict = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = dict.title;
+
+    const back = document.querySelector(".contact-back");
+    const pageTitle = document.querySelector(".contact-title");
+    const intros = document.querySelectorAll(".contact-intro");
+    const details = document.querySelectorAll(".contact-details p");
+    const note = document.querySelector(".contact-note");
+    const footerLinks = document.querySelectorAll(".footer-links a");
+
+    if (back) back.textContent = dict.back;
+    if (pageTitle) pageTitle.textContent = dict.pageTitle;
+    if (intros[0]) intros[0].textContent = dict.intro1;
+    if (intros[1]) intros[1].textContent = dict.intro2;
+
+    if (details[0]) {
+      details[0].innerHTML = `<strong>${dict.namesLabel}</strong> Sebastian, Kevin, Allen, Gabriel, and Kayla`;
+    }
+
+    if (details[1]) {
+      details[1].innerHTML = `<strong>${dict.emailsLabel}</strong> LIY55@tcd.ie, KEWU@tcd.ie, ZHCAO@tcd.ie, YESUN@tcd.ie, KBYRNES@tcd.ie`;
+    }
+
+    if (details[2]) {
+      details[2].innerHTML = `<strong>${dict.institutionLabel}</strong> ${dict.institutionValue}`;
+    }
+
+    if (note) note.textContent = dict.note;
+
+    if (footerLinks[0]) footerLinks[0].textContent = dict.footerSources;
+    if (footerLinks[1]) footerLinks[1].textContent = dict.footerContact;
+  })();
+</script>
+    
   </body>
 </html>
