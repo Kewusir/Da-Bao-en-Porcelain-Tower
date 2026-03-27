@@ -1,5 +1,3 @@
-/*-------------------------------- ROOT VARIABLES --------------------------------*/
-
 :root {
   --paper: #0c0c0b;
   --paper-2: #151412;
@@ -11,7 +9,322 @@
   --chip-bg: rgba(29, 27, 24, 0.72);
 }
 
-/*-------------------------------- GLOBAL STYLES --------------------------------*/
+/* Detail page additions */
+.era-page {
+  --era-accent: #a98d5d;
+}
+
+.era-layout {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 56px 28px 96px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 560ms ease, transform 560ms ease;
+}
+
+.era-layout.entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.era-back {
+  display: inline-flex;
+  margin-bottom: 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.era-intro {
+  max-width: 74rem;
+}
+
+.era-kicker {
+  margin: 0 0 12px;
+  color: var(--era-accent);
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.era-title {
+  margin: 0;
+  max-width: 11ch;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.era-intro-copy {
+  margin-top: 18px;
+  max-width: 50rem;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.88;
+}
+
+.era-flow {
+  margin-top: 42px;
+  display: grid;
+  gap: 28px;
+}
+
+.era-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.era-block.image-left {
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.era-text-card {
+  padding: 28px 30px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 28px;
+  background: rgba(19, 18, 16, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.era-text-card h2 {
+  margin: 0 0 14px;
+  color: var(--era-accent);
+  font-size: 1.02rem;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.era-text-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.era-media-card {
+  display: grid;
+  gap: 12px;
+}
+
+.era-figure-frame,
+.era-wide-frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border: 1px dashed rgba(239, 231, 214, 0.14);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(208, 168, 90, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  color: color-mix(in srgb, var(--era-accent) 76%, var(--ink));
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.era-figure-frame {
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.era-figure-frame img,
+.era-wide-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.interactive-image {
+  cursor: zoom-in;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.interactive-image:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.era-thumb-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  border-radius: inherit;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: zoom-in;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.era-thumb-button:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.era-thumb-button-portrait {
+  background-image: url("./photos/contemporary/3.png?v=20260326m");
+  background-size: 118% auto;
+  background-position: center 36%;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(8, 8, 8, 0.92);
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.image-lightbox-content {
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 1400px);
+  max-height: 88vh;
+  display: grid;
+  gap: 12px;
+}
+
+.image-lightbox-image {
+  max-width: 100%;
+  max-height: calc(88vh - 48px);
+  border-radius: 20px;
+  display: block;
+  object-fit: contain;
+  box-shadow: var(--shadow);
+}
+
+.image-lightbox-panel {
+  padding: 14px 16px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 18px;
+  background: rgba(17, 16, 14, 0.92);
+}
+
+.image-lightbox-title {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.image-lightbox-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  border: 1px solid rgba(239, 231, 214, 0.12);
+  border-radius: 999px;
+  background: rgba(17, 16, 14, 0.88);
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+}
+
+.era-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.era-section {
+  margin-top: 52px;
+}
+
+.era-section-title {
+  margin: 0 0 20px;
+  color: var(--ink);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.era-wide-frame {
+  min-height: 340px;
+  margin-top: 18px;
+}
+
+.era-panel {
+  padding: 26px 28px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 24px;
+  background: rgba(19, 18, 16, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.era-panel h2 {
+  margin: 0 0 12px;
+  color: var(--era-accent);
+  font-size: 1.05rem;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.era-panel p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .era-flow {
+    gap: 20px;
+  }
+
+  .era-block,
+  .era-block.image-left {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .era-figure-frame {
+    min-height: 240px;
+  }
+
+  .era-wide-frame {
+    min-height: 240px;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -43,8 +356,6 @@ body::before {
   background-size: 88px 88px;
   opacity: 0.36;
 }
-
-/*-------------------------------- HERO SECTION --------------------------------*/
 
 .hero {
   position: relative;
@@ -103,8 +414,6 @@ body::before {
   font-size: 0.85rem;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
 }
-
-/*-------------------------------- TIMELINE LAYOUT --------------------------------*/
 
 .timeline-board {
   position: relative;
@@ -188,7 +497,7 @@ body::before {
   pointer-events: none;
 }
 
-/* .stage-overlay {
+.stage-overlay {
   position: absolute;
   left: 50%;
   bottom: 16px;
@@ -207,7 +516,7 @@ body::before {
   font-size: 0.78rem;
   white-space: nowrap;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-} */
+}
 
 .timeline-flow {
   position: relative;
@@ -238,8 +547,6 @@ body::before {
 .row-right .node-button {
   grid-column: 2;
 }
-
-/*-------------------------------- TIMELINE CARDS --------------------------------*/
 
 .timeline-card {
   position: relative;
@@ -326,33 +633,6 @@ body::before {
   color: var(--muted);
   line-height: 1.85;
   font-size: 0.98rem;
-}
-
-/*----------------------------- BUTTONS & INTERACTIONS ------------------------------*/
-
-.return-top-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 32px 0; 
-  /* border: 1px solid blue; */
-}
-
-.return-top {
-  padding: 9px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(239, 231, 214, 0.08);
-  background: var(--chip-bg);
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.return-top:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 .era-button,
@@ -454,8 +734,6 @@ body::before {
   box-shadow: 14px 14px 24px rgba(0, 0, 0, 0.15);
 }
 
-/*-------------------------------- TRANSITION SCREEN --------------------------------*/
-
 .transition-screen {
   position: fixed;
   inset: 0;
@@ -499,8 +777,6 @@ body::before {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-
-/*-------------------------------- ERA PAGE LAYOUT --------------------------------*/
 
 .era-page {
   --era-accent: #a98d5d;
@@ -661,125 +937,9 @@ body::before {
   font-size: 1rem;
 }
 
-/* Legacy detail-page layout for present/industrial/medieval/classical/ancient pages. */
-.era-page .era-intro {
-  max-width: 74rem;
-}
-
-.era-page .era-intro-copy {
-  margin-top: 18px;
-  max-width: 50rem;
-  color: var(--muted);
-  font-size: 1.04rem;
-  line-height: 1.88;
-}
-
-.era-page .era-flow {
-  margin-top: 42px;
-  display: grid;
-  gap: 28px;
-}
-
-.era-page .era-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 30px;
-  align-items: start;
-}
-
-.era-page .era-block.image-left {
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-}
-
-.era-page .era-text-card {
-  padding: 28px 30px;
-  border: 1px solid rgba(239, 231, 214, 0.08);
-  border-radius: 28px;
-  background: rgba(19, 18, 16, 0.82);
-  box-shadow: var(--shadow);
-}
-
-.era-page .era-text-card h2 {
-  margin: 0 0 14px;
-  color: var(--era-accent);
-  font-size: 1.02rem;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.era-page .era-text-card p {
-  margin: 0;
-  color: var(--ink);
-  line-height: 1.9;
-  font-size: 1rem;
-}
-
-.era-page .era-media-card {
-  display: grid;
-  gap: 12px;
-}
-
-.era-page .era-figure-frame,
-.era-page .era-wide-frame {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  border: 1px dashed rgba(239, 231, 214, 0.14);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at top left, rgba(208, 168, 90, 0.08), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  color: color-mix(in srgb, var(--era-accent) 76%, var(--ink));
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.era-page .era-figure-frame {
-  min-height: 300px;
-}
-
-.era-page .era-figure-frame img,
-.era-page .era-wide-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  display: block;
-}
-
-.era-page .era-caption {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.era-page .era-section {
-  margin-top: 52px;
-}
-
-.era-page .era-section-title {
-  margin: 0 0 20px;
-  color: var(--ink);
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  line-height: 0.96;
-  letter-spacing: -0.05em;
-}
-
-.era-page .era-wide-frame {
-  min-height: 340px;
-  margin-top: 18px;
-}
-
 .hero-with-nav {
   padding-top: 28px;
 }
-
-/*-------------------------------- NAVIGATION --------------------------------*/
 
 .site-nav {
   position: relative;
@@ -848,8 +1008,6 @@ body::before {
   content: " \2304";
   font-size: 0.78rem;
 }
-
-/*-------------------------------- INFO PAGE --------------------------------*/
 
 .info-page {
   min-height: 100vh;
@@ -1030,36 +1188,6 @@ body::before {
   line-height: 1.7;
 }
 
-.info-exhibition-section {
-  margin-top: 28px;
-}
-
-.info-panel-exhibition {
-  min-height: 520px;
-  justify-content: flex-start;
-  background:
-    radial-gradient(circle at top center, rgba(217, 170, 94, 0.14), transparent 28%),
-    linear-gradient(180deg, rgba(23, 21, 18, 0.95), rgba(16, 15, 13, 0.88));
-}
-
-.info-gallery-reserve {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: auto;
-  padding-top: 44px;
-}
-
-.info-gallery-slot {
-  min-height: 220px;
-  border: 1px dashed rgba(239, 231, 214, 0.14);
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-}
-
-/*-------------------------------- LANGUAGE DROPDOWN --------------------------------*/
-
 .lang-dropdown {
   position: relative;
   z-index: 2000;
@@ -1105,205 +1233,6 @@ body::before {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/*-------------------------------- FOOTER --------------------------------*/
-
-.site-footer {
-  margin-top: 120px;
-  padding: 28px;
-  border-top: 1px solid rgba(239, 231, 214, 0.08);
-  background: rgba(12, 12, 11, 0.9);
-}
-
-.footer-inner {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: var(--ink);
-  text-decoration: none;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 180ms ease;
-}
-
-.footer-links a:hover {
-  color: var(--muted);
-}
-
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-/* logo */
-.footer-logo img {
-  height: 28px;
-  width: auto;
-  display: block;
-  opacity: 0.9;
-}
-
-.footer-social {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social img {
-  width: 16px;
-  height: 16px;
-  display: block;
-  opacity: 0.8;
-  transition: opacity 160ms ease;
-}
-
-.footer-social a:hover img {
-  opacity: 1;
-}
-
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(239, 231, 214, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  text-decoration: none;
-  transition:
-    transform 160ms ease,
-    color 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease;
-}
-
-.footer-social a:hover {
-  color: var(--ink);
-  border-color: rgba(239, 231, 214, 0.2);
-  background: rgba(255, 255, 255, 0.06);
-  transform: translateY(-2px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-}
-
-/*--------------------------------- SOURCES ----------------------------------*/
-
-.sources-page {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 0 24px;
-}
-
-.sources-back {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-}
-
-.sources-title {
-  font-size: 2rem;
-  margin-bottom: 28px;
-  letter-spacing: -0.02em;
-}
-
-.sources-page h2 {
-  margin-top: 28px;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-}
-
-.sources-page ul {
-  margin: 0 0 18px;
-  padding-left: 18px;
-}
-
-.sources-page li {
-  margin-bottom: 6px;
-}
-
-.sources-page a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.sources-page a:hover {
-  color: var(--ink);
-  text-decoration: underline;
-}
-
-/*-------------------------------- CONTACT PAGE --------------------------------*/
-
-.contact-page {
-  max-width: 700px;
-  margin: 100px auto;
-  padding: 0 24px;
-}
-
-.contact-back {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-}
-
-.contact-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-}
-
-.contact-intro {
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.contact-details p {
-  margin: 6px 0;
-}
-
-.contact-note {
-  margin-top: 28px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/*-------------------------------- ANIMATIONS --------------------------------*/
-
 @keyframes menuReveal {
   from {
     opacity: 0;
@@ -1329,8 +1258,6 @@ body::before {
     transform: translateY(-8px) scale(1);
   }
 }
-
-/*-------------------------------- RESPONSIVENESS --------------------------------*/
 
 @media (max-width: 1180px) {
   .timeline-row {
@@ -1369,21 +1296,6 @@ body::before {
   .era-side {
     position: relative;
     top: auto;
-  }
-
-  .era-page .era-flow {
-    gap: 20px;
-  }
-
-  .era-page .era-block,
-  .era-page .era-block.image-left {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .era-page .era-figure-frame,
-  .era-page .era-wide-frame {
-    min-height: 240px;
   }
 
   .timeline-board {
@@ -1483,129 +1395,4 @@ body::before {
     right: auto;
     left: 0;
   }
-}
-
-/*-------------------------------- INTRO SCREEN --------------------------------*/
-
-.home-intro {
-  overflow-x: hidden;
-}
-
-.intro-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 5000;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle at 50% 40%, rgba(171, 128, 63, 0.16), transparent 26%),
-    linear-gradient(180deg, rgba(8, 8, 8, 0.96), rgba(8, 8, 8, 0.995));
-  transition:
-    opacity 900ms ease,
-    visibility 900ms ease,
-    transform 900ms ease;
-}
-
-.intro-stack {
-  text-align: center;
-  padding: 24px;
-  margin-top: -100px;
-  animation: introRise 1.4s ease forwards;
-}
-
-
-.intro-kicker {
-  margin: 0 0 18px;
-  color: rgba(239, 231, 214, 0.72);
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
-.intro-title {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(3rem, 7vw, 6.4rem);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-}
-
-.intro-subtitle {
-  margin: 16px 0 0;
-  color: rgba(239, 231, 214, 0.82);
-  font-size: 1rem;
-  letter-spacing: 0.18em;
-}
-
-.home-intro .hero,
-.home-intro .timeline-board {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease;
-}
-
-.home-intro.intro-finished .hero,
-.home-intro.intro-finished .timeline-board {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.home-intro.intro-finished .intro-screen {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(1.02);
-  pointer-events: none;
-}
-
-@keyframes introRise {
-  0% {
-    opacity: 0;
-    transform: translateY(28px) scale(0.98);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.intro-logo {
-  display: block;
-  width: min(240px, 22vw);
-  height: auto;
-  margin: 0 auto -60px;
-  transform: translateY(-55px);
-  object-fit: contain;
-  opacity: 0.96;
-  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.32));
-}
-.return-top {
-  appearance: none;
-  border: 1px solid rgba(239, 231, 214, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--ink);
-  cursor: pointer;
-  text-decoration: none;
-  font: inherit;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 10px 14px;
-  border-radius: 999px;
-  transition:
-    color 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease,
-    transform 180ms ease;
-}
-
-.return-top:hover {
-  color: var(--ink);
-  border-color: rgba(239, 231, 214, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-  transform: translateY(-1px);
 }

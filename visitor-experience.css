@@ -260,6 +260,81 @@ body::before {
   filter: saturate(0.94) brightness(0.98);
 }
 
+.interactive-image {
+  cursor: zoom-in;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.interactive-image:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.info-quick-visit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0 0 22px;
+  padding: 18px 22px;
+  border: 1px solid rgba(239, 231, 214, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+
+.info-quick-visit-main {
+  min-width: 0;
+}
+
+.info-quick-visit-name {
+  margin: 0 0 5px;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.info-quick-visit-meta {
+  margin: 0 0 10px;
+  color: rgba(239, 231, 214, 0.72);
+  font-size: 0.9rem;
+}
+
+.info-quick-visit-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.info-quick-visit-label {
+  color: var(--ink);
+  margin-right: 4px;
+}
+
+.info-quick-visit-side {
+  flex-shrink: 0;
+}
+
+.info-quick-book {
+  appearance: none;
+  border: 1px solid rgba(239, 231, 214, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  padding: 10px 22px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.info-quick-book:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .info-essentials-grid {
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
@@ -398,7 +473,7 @@ body::before {
 }
 
 .info-note {
-  margin-top: 14px;
+  margin-top: 10px;
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.7;
@@ -423,7 +498,7 @@ body::before {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: auto;
-  padding-top: 44px;
+  padding-top: 12px;
 }
 
 .info-gallery-slot {
@@ -432,6 +507,66 @@ body::before {
   border-radius: 24px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  overflow: hidden;
+}
+
+.info-gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(8, 8, 8, 0.92);
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.image-lightbox-content {
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 1400px);
+  max-height: 88vh;
+  display: grid;
+  gap: 12px;
+}
+
+.image-lightbox-image {
+  max-width: 100%;
+  max-height: calc(88vh - 48px);
+  border-radius: 20px;
+  display: block;
+  object-fit: contain;
+  box-shadow: var(--shadow);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  border: 1px solid rgba(239, 231, 214, 0.12);
+  border-radius: 999px;
+  background: rgba(17, 16, 14, 0.88);
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
 }
 
 .lang-dropdown {
@@ -479,114 +614,6 @@ body::before {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/*-------------------------------- FOOTER --------------------------------*/
-
-.site-footer {
-  margin-top: 120px;
-  padding: 28px;
-  border-top: 1px solid rgba(239, 231, 214, 0.08);
-  background: rgba(12, 12, 11, 0.9);
-}
-
-.footer-inner {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: var(--ink);
-  text-decoration: none;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 180ms ease;
-}
-
-.footer-links a:hover {
-  color: var(--muted);
-}
-
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-/* logo */
-.footer-logo img {
-  height: 28px;
-  width: auto;
-  display: block;
-  opacity: 0.9;
-}
-
-.footer-social {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social img {
-  width: 16px;
-  height: 16px;
-  display: block;
-  opacity: 0.8;
-  transition: opacity 160ms ease;
-}
-
-.footer-social a:hover img {
-  opacity: 1;
-}
-
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(239, 231, 214, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  text-decoration: none;
-  transition:
-    transform 160ms ease,
-    color 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease;
-}
-
-.footer-social a:hover {
-  color: var(--ink);
-  border-color: rgba(239, 231, 214, 0.2);
-  background: rgba(255, 255, 255, 0.06);
-  transform: translateY(-2px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-}
-
-/*-------------------------------- RESPONSIVENESS --------------------------------*/
-
 @media (max-width: 960px) {
   .site-nav {
     flex-direction: column;
@@ -600,6 +627,11 @@ body::before {
   .info-hero,
   .info-essentials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .info-quick-visit {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .info-hero-copy,
