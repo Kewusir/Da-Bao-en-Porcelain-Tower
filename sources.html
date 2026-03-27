@@ -107,6 +107,77 @@
       </div>
     </footer>
 
+    <script>
+  (function () {
+    const translations = {
+      en: {
+        title: "Sources",
+        back: "← Back to Timeline",
+        pageTitle: "Porcelain Tower Project Sources",
+        section1: "Article / Info",
+        section2: "Copyright Free Images",
+        section3: "Contemporary Photographs",
+        section4: "Tourists’ Photographs",
+        link1: "Alamy – Porcelain tower Nanjing",
+        link2: "Getty Images – Porcelain Tower of Nanjing",
+        link3: "PICRYL – Archive images",
+        link4: "Wikimedia Commons – Porcelain Pagoda in art",
+        link5: "Wikimedia Commons – Image search",
+        link6: "TripAdvisor – Grand Bao’en Temple",
+        footerSources: "Sources",
+        footerContact: "Contact"
+      },
+      zh: {
+        title: "资料来源",
+        back: "← 返回时间线",
+        pageTitle: "琉璃塔项目资料来源",
+        section1: "文章 / 信息来源",
+        section2: "免版权图片",
+        section3: "当代照片",
+        section4: "游客照片",
+        link1: "Alamy－南京琉璃塔",
+        link2: "Getty Images－南京琉璃塔",
+        link3: "PICRYL－档案图像",
+        link4: "维基共享－艺术中的南京琉璃塔",
+        link5: "维基共享－图片搜索",
+        link6: "TripAdvisor－大报恩寺",
+        footerSources: "资料来源",
+        footerContact: "联系方式"
+      }
+    };
+
+    const lang = localStorage.getItem("dabaoen-lang") || "en";
+    const dict = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = dict.title;
+
+    const back = document.querySelector(".sources-back");
+    const pageTitle = document.querySelector(".sources-title");
+    const headings = document.querySelectorAll(".sources-page h2");
+    const footerLinks = document.querySelectorAll(".footer-links a");
+
+    const allLinks = document.querySelectorAll(".sources-page ul li a");
+
+    if (back) back.textContent = dict.back;
+    if (pageTitle) pageTitle.textContent = dict.pageTitle;
+
+    if (headings[0]) headings[0].textContent = dict.section1;
+    if (headings[1]) headings[1].textContent = dict.section2;
+    if (headings[2]) headings[2].textContent = dict.section3;
+    if (headings[3]) headings[3].textContent = dict.section4;
+
+    if (allLinks[2]) allLinks[2].textContent = dict.link1;
+    if (allLinks[3]) allLinks[3].textContent = dict.link2;
+    if (allLinks[4]) allLinks[4].textContent = dict.link3;
+    if (allLinks[5]) allLinks[5].textContent = dict.link4;
+    if (allLinks[6]) allLinks[6].textContent = dict.link5;
+    if (allLinks[7]) allLinks[7].textContent = dict.link6;
+
+    if (footerLinks[0]) footerLinks[0].textContent = dict.footerSources;
+    if (footerLinks[1]) footerLinks[1].textContent = dict.footerContact;
+  })();
+</script>
 
   </body>
 </html>
