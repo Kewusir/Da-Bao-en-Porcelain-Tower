@@ -3,19 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn More | Da Bao'en Temple</title>
+    <title>Learn More | Great Bao'en Temple</title>
     <link rel="stylesheet" href="style.css?v=20260323b" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
   </head>
   <body class="info-page">
     <header class="info-header">
       <div class="site-nav">
-        <a class="brand-mark info-brand" href="./index.html" data-i18n="brand_mark">Nanjing | Da Bao'en Temple</a>
+        <a class="brand-mark info-brand" href="./index.html" data-i18n="brand_mark">Nanjing | Great Bao'en Temple</a>
 
         <nav class="top-nav" aria-label="Primary navigation">
           <a href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
           <a class="active" aria-current="page" href="./learn-more.html" data-i18n="nav_learn_more">Learn More</a>
           <a href="./visitor-experience.html" data-i18n="nav_visitor_experience">Visitor Experience</a>
-          <span class="top-nav-lang top-nav-lang-static" id="lang-current" aria-label="Current language">EN</span>
+
+          <div class="lang-dropdown">
+            <button
+              class="top-nav-lang"
+              id="lang-toggle"
+              type="button"
+              aria-label="Language switcher"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EN
+            </button>
+
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button type="button" class="lang-option" data-lang="en">English</button>
+              <button type="button" class="lang-option" data-lang="zh">中文</button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -24,7 +42,7 @@
       <section class="info-hero">
         <div>
           <p class="info-kicker" data-i18n="kicker">Learn More</p>
-          <h1 class="info-title" data-i18n="title">Visualizing the Dabao’en Temple</h1>
+          <h1 class="info-title" data-i18n="title">Visualizing the Great Dabao’en Temple</h1>
           <p class="info-lead" data-i18n="lead">
             This page extends the historical timeline with background on the temple’s layered
             history, the Ming reconstruction, and the modern museum site. It works as a secondary
@@ -96,6 +114,41 @@
       </section>
     </main>
 
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- left side links -->
+        <div class="footer-left">
+          <a href="./index.html" class="footer-logo">
+            <img src="./assets/Logo-wordmark.png" alt="Logo for home page"/>
+          </a>
+
+          <div class="footer-links">
+            <a href="./sources.html">Sources</a>
+            <a href="./contact.html">Contact</a>   
+          </div>
+        </div>
+
+        <!-- right side links --> 
+        <div class="footer-social">
+          <a href="https://www.facebook.com/" aria-label="Facebook">
+            <img src="./assets/icon-fb.svg" alt="Facebook icon"/>
+          </a>
+
+          <a href="https://www.instagram.com/" aria-label="Instagram">
+            <img src="./assets/icon-insta.svg" alt="Instagram icon"/>
+          </a>
+
+          <a href="https://www.pinterest.com/" aria-label="Pinterest">
+            <img src="./assets/icon-pinterest.svg" alt="Pinterest icon"/>
+          </a>
+
+          <a href="https://www.youtube.com/" aria-label="YouTube">
+            <img src="./assets/icon-youtube.svg" alt="YouTube icon"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+    
     <script src="lang-learn-more.js"></script>
   </body>
 </html>

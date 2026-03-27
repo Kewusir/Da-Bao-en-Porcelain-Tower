@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Da Bao'en Temple Timeline</title>
+    <title>Great Bao'en Temple Timeline</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
     <link rel="stylesheet" href="style.css?v=20260323b" />
     <script type="importmap">
       {
@@ -13,10 +14,27 @@
       }
     </script>
   </head>
-  <body>
+
+  <body class="home-intro">
+   
+    <div class="intro-screen" aria-hidden="true">
+    <div class="intro-stack">
+      <img
+        class="intro-logo"
+        src="./assets/Logo.png"
+        alt="Great Bao'en Temple logo"
+      />
+      <p class="intro-kicker">Nanjing | Great Bao'en Temple</p>
+      <h1 class="intro-title">Porcelain Tower</h1>
+      <p class="intro-subtitle">大报恩寺琉璃塔</p>
+    </div>
+  </div>
+
+
+
     <header class="hero">
       <div class="site-nav">
-        <div class="brand-mark" data-i18n="brand_mark">Nanjing | Da Bao'en Temple</div>
+        <div class="brand-mark" data-i18n="brand_mark">Nanjing | Great Bao'en Temple</div>
 
         <nav class="top-nav" aria-label="Primary navigation">
           <a class="active" aria-current="page" href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
@@ -49,18 +67,20 @@
     <main class="timeline-board">
       <div class="tower-column">
         <div class="tower-sticky">
-          <div class="axis-label axis-label-top" data-i18n="axis_top">2025 Museum Era</div>
+          <!-- kb: removed this label for simplicity -->
+          <!-- <div class="axis-label axis-label-top" data-i18n="axis_top">2025 Museum Era</div> -->
           <div class="scene-wrap">
             <canvas id="tower-canvas" aria-label="Interactive 3D temple timeline"></canvas>
             <div class="scene-status" id="scene-status" data-i18n="scene_status_initial">
               Initializing 3D tower...
             </div>
-            <div class="stage-overlay">
+            <!-- <div class="stage-overlay">
               <div class="overlay-chip" data-i18n="overlay_hover">Hover tower to tilt</div>
               <div class="overlay-chip" data-i18n="overlay_click">Click tower to follow history</div>
-            </div>
+            </div> -->
           </div>
-          <div class="axis-label axis-label-bottom" data-i18n="axis_bottom">1011 Underground Palace</div>
+          <!-- kb: removed this label for simplicity -->
+          <!-- <div class="axis-label axis-label-bottom" data-i18n="axis_bottom">1011 Underground Palace</div> -->
         </div>
       </div>
 
@@ -71,7 +91,7 @@
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year" data-i18n="present_year">2015 to 2025</p>
+            <p class="card-year" data-i18n="present_year">from 2015 to 2025</p>
             <h2 data-i18n="present_title">Ruins Museum and Rebuilt Pagoda</h2>
             <p class="card-copy" data-i18n="present_copy">
               The Grand Bao'en Temple Ruins Museum and heritage park reopened the site to the
@@ -84,7 +104,7 @@
 
         <article class="timeline-row row-left" data-era="industrial" style="--accent: #6f8a8f;">
           <section class="timeline-card">
-            <p class="card-year" data-i18n="industrial_year">1856 to 1864</p>
+            <p class="card-year" data-i18n="industrial_year">from 1856 to 1864</p>
             <h2 data-i18n="industrial_title">Fire, War, and Collapse</h2>
             <p class="card-copy" data-i18n="industrial_copy">
               During the Taiping conflict, the famous glazed pagoda and the temple complex were
@@ -99,13 +119,13 @@
           <div class="row-spacer"></div>
         </article>
 
-        <article class="timeline-row row-right" data-era="medieval" style="--accent: #a98d5d;">
+        <article class="timeline-row row-right" data-era="medieval" style="--accent: #7c5cff;">
           <div class="row-spacer"></div>
           <button class="node-button" type="button" data-era-trigger="medieval" aria-label="Jump to medieval era">
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year" data-i18n="medieval_year">15th to 19th century</p>
+            <p class="card-year" data-i18n="medieval_year">from the 15th to the 19th centuries</p>
             <h2 data-i18n="medieval_title">A Wonder Known Across the World</h2>
             <p class="card-copy" data-i18n="medieval_copy">
               The glazed tower of Nanjing became one of the city’s best-known landmarks and was
@@ -116,9 +136,9 @@
           </section>
         </article>
 
-        <article class="timeline-row row-left" data-era="classical" style="--accent: #d0a85a;">
+        <article class="timeline-row row-left" data-era="classical" style="--accent: #3fbf6f;">
           <section class="timeline-card">
-            <p class="card-year" data-i18n="classical_year">1412 to 1431</p>
+            <p class="card-year" data-i18n="classical_year">from 1412 to 1431</p>
             <h2 data-i18n="classical_title">Yongle’s Imperial Reconstruction</h2>
             <p class="card-copy" data-i18n="classical_copy">
               Under the Yongle Emperor, the Great Bao'en Temple was rebuilt at extraordinary scale
@@ -139,7 +159,7 @@
             <span></span>
           </button>
           <section class="timeline-card">
-            <p class="card-year" data-i18n="ancient_year">1011 and 2008</p>
+            <p class="card-year" data-i18n="ancient_year">from 1011 to 2008</p>
             <h2 data-i18n="ancient_title">Song Crypt Beneath the Ming Temple</h2>
             <p class="card-copy" data-i18n="ancient_copy">
               Beneath the later Ming complex lay the underground palace of the earlier Changgan
@@ -157,7 +177,57 @@
       <div class="transition-title" data-i18n="transition_title">Entering the era</div>
     </div>
 
+    <!-- Return to Top button -->
+    <div class="return-top-wrapper">
+      <button class="return-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        Return to Top
+      </button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- left side links -->
+        <div class="footer-left">
+          <a href="./index.html" class="footer-logo">
+            <img src="./assets/Logo-wordmark.png" alt="Logo for home page"/>
+          </a>
+
+          <div class="footer-links">
+            <a href="./sources.html">Sources</a>
+            <a href="./contact.html">Contact</a>   
+          </div>
+        </div>
+
+        <!-- right side links --> 
+        <div class="footer-social">
+          <a href="https://www.facebook.com/" aria-label="Facebook">
+            <img src="./assets/icon-fb.svg" alt="Facebook icon"/>
+          </a>
+
+          <a href="https://www.instagram.com/" aria-label="Instagram">
+            <img src="./assets/icon-insta.svg" alt="Instagram icon"/>
+          </a>
+
+          <a href="https://www.pinterest.com/" aria-label="Pinterest">
+            <img src="./assets/icon-pinterest.svg" alt="Pinterest icon"/>
+          </a>
+
+          <a href="https://www.youtube.com/" aria-label="YouTube">
+            <img src="./assets/icon-youtube.svg" alt="YouTube icon"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <script src="lang-index.js"></script>
     <script type="module" src="main.js?v=20260323b"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const body = document.body;
+        window.setTimeout(() => {
+          body.classList.add("intro-finished");
+        }, 1800);
+      });
+    </script>
   </body>
 </html>

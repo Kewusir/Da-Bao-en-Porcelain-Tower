@@ -1,0 +1,259 @@
+.info-map-preview-live {
+  position: relative;
+  isolation: isolate;
+  min-height: 380px;
+  background: none;
+}
+
+.info-map-preview-live::before,
+.info-map-preview-live::after {
+  display: none;
+}
+
+.visitor-leaflet-map {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 24px;
+}
+
+.visitor-map-toolbar {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: calc(100% - 28px);
+  pointer-events: none;
+}
+
+.visitor-map-marker {
+  background: transparent;
+  border: none;
+}
+
+.visitor-map-marker-featured {
+  width: 124px;
+  height: 72px;
+}
+
+.visitor-map-featured-pin {
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(19, 18, 16, 0.94);
+  border-radius: 50%;
+  background: #d9aa5e;
+  box-shadow: 0 0 0 8px rgba(217, 170, 94, 0.22);
+}
+
+.visitor-map-featured-halo {
+  position: absolute;
+  left: 6px;
+  bottom: -2px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(217, 170, 94, 0.45);
+  border-radius: 50%;
+  background: rgba(217, 170, 94, 0.08);
+  animation: visitor-map-pulse 2.2s ease-out infinite;
+}
+
+.visitor-map-featured-badge {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid rgba(217, 170, 94, 0.34);
+  border-radius: 16px 16px 16px 4px;
+  background: linear-gradient(180deg, rgba(39, 31, 21, 0.96), rgba(21, 18, 14, 0.98));
+  color: #fff0d0;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  text-transform: none;
+}
+
+.info-map-preview-live .leaflet-tooltip.visitor-map-label {
+  padding: 6px 10px;
+  border: 1px solid rgba(239, 231, 214, 0.12);
+  border-radius: 12px;
+  background: rgba(20, 18, 16, 0.92);
+  color: #efe7d6;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.info-map-preview-live .leaflet-tooltip.visitor-map-label::before {
+  display: none;
+}
+
+.visitor-map-label-title,
+.visitor-map-label-subtitle {
+  display: block;
+  white-space: nowrap;
+  line-height: 1.35;
+}
+
+.visitor-map-label-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.visitor-map-label-subtitle {
+  font-size: 0.68rem;
+  color: rgba(239, 231, 214, 0.74);
+}
+
+.info-map-preview-live .leaflet-tooltip.visitor-map-label-featured {
+  padding: 8px 12px;
+  border-color: rgba(217, 170, 94, 0.36);
+  background: rgba(31, 25, 18, 0.96);
+}
+
+.visitor-map-toggle {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(239, 231, 214, 0.14);
+  border-radius: 999px;
+  background: rgba(14, 13, 11, 0.82);
+  color: #efe7d6;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.visitor-map-toggle:hover,
+.visitor-map-toggle:focus-visible {
+  outline: none;
+  transform: translateY(-1px);
+  border-color: rgba(239, 231, 214, 0.24);
+  background: rgba(34, 31, 26, 0.94);
+}
+
+.visitor-map-toggle.is-active {
+  border-color: rgba(217, 170, 94, 0.45);
+  background: rgba(217, 170, 94, 0.2);
+  color: #fff2d7;
+}
+
+.info-map-preview-live .leaflet-control-attribution,
+.info-map-preview-live .leaflet-control-zoom {
+  border: none;
+  box-shadow: none;
+}
+
+.info-map-preview-live .leaflet-top.leaflet-left {
+  top: 58px;
+}
+
+.info-map-preview-live .leaflet-control-zoom a {
+  border: 1px solid rgba(239, 231, 214, 0.12);
+  background: rgba(14, 13, 11, 0.88);
+  color: #efe7d6;
+}
+
+.info-map-preview-live .leaflet-control-zoom a:hover {
+  background: rgba(34, 31, 26, 0.96);
+  color: #efe7d6;
+}
+
+.info-map-preview-live .leaflet-popup-content-wrapper,
+.info-map-preview-live .leaflet-popup-tip {
+  background: rgba(20, 18, 16, 0.96);
+  color: #efe7d6;
+}
+
+.info-map-preview-live .leaflet-popup-content {
+  margin: 12px 14px;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.info-map-preview-live .leaflet-popup-content strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.info-map-preview-live .leaflet-popup-content span {
+  display: block;
+}
+
+.info-map-preview-live .leaflet-popup-content .visitor-map-popup-copy {
+  margin-top: 4px;
+  color: rgba(239, 231, 214, 0.76);
+}
+
+@keyframes visitor-map-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .visitor-map-toolbar {
+    gap: 6px;
+  }
+
+  .visitor-map-toggle {
+    padding: 6px 10px;
+    font-size: 0.68rem;
+  }
+
+  .info-map-preview-live .leaflet-top.leaflet-left {
+    top: 94px;
+  }
+
+  .visitor-map-featured-badge {
+    min-width: 68px;
+    padding: 7px 9px;
+    font-size: 0.68rem;
+  }
+
+  .info-map-preview-live .leaflet-tooltip.visitor-map-label {
+    padding: 5px 8px;
+  }
+
+  .visitor-map-label-title {
+    font-size: 0.68rem;
+  }
+
+  .visitor-map-label-subtitle {
+    font-size: 0.64rem;
+  }
+}

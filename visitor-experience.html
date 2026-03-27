@@ -3,94 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visitor Experience | Da Bao'en Temple</title>
-    <link rel="stylesheet" href="style.css?v=20260323b" />
+    <title>Visitor Experience | Great Bao'en Temple</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="visitor-experience.css?v=20260327b" />
+    <link rel="stylesheet" href="visitor-map.css?v=20260326a" />
   </head>
   <body class="info-page">
     <header class="info-header">
       <div class="site-nav">
-        <a class="brand-mark info-brand" href="./index.html" data-i18n="brand_mark">Nanjing | Da Bao'en Temple</a>
+        <a class="brand-mark info-brand" href="./index.html" data-i18n="brand_mark">Nanjing | Great Bao'en Temple</a>
 
         <nav class="top-nav" aria-label="Primary navigation">
           <a href="./index.html" data-i18n="nav_timeline">Historical Timeline</a>
           <a href="./learn-more.html" data-i18n="nav_learn_more">Learn More</a>
           <a class="active" aria-current="page" href="./visitor-experience.html" data-i18n="nav_visitor_experience">Visitor Experience</a>
-          <span class="top-nav-lang top-nav-lang-static" id="lang-current" aria-label="Current language">EN</span>
+
+          <div class="lang-dropdown">
+            <button
+              class="top-nav-lang"
+              id="lang-toggle"
+              type="button"
+              aria-label="Language switcher"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EN
+            </button>
+
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button type="button" class="lang-option" data-lang="en">English</button>
+              <button type="button" class="lang-option" data-lang="zh">中文</button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
 
     <main class="info-shell">
       <section class="info-hero">
-        <div>
+        <div class="info-hero-copy">
           <p class="info-kicker" data-i18n="kicker">Visitor Experience</p>
-          <h1 class="info-title" data-i18n="title">Plan a Guided Journey Through the Site</h1>
+          <h1 class="info-title" data-i18n="title">Visitor Essentials</h1>
           <p class="info-lead" data-i18n="lead">
-            This page supports visitor-oriented navigation. It can introduce a recommended route,
-            highlight key moments to explore first, and funnel people back into the main historical
-            timeline and detailed era pages.
-          </p>
-        </div>
-
-        <aside class="info-sidecard">
-          <p class="info-sidecard-label" data-i18n="side_label">Recommended Start</p>
-          <h2 data-i18n="side_title">Begin with the 3D timeline, then move into details.</h2>
-          <p data-i18n="side_copy">
-            The mainpage remains the core experience. From there, visitors can branch into focused
-            reading about the crypt, the Ming pagoda, or the present-day museum.
+            A new page skeleton for practical visitor planning, with room to expand later.
           </p>
 
           <div class="info-actions">
             <a class="info-button" href="./index.html" data-i18n="button_timeline">Start at Timeline</a>
-            <a class="info-button" href="./era.html?era=present" data-i18n="button_museum">Open Museum Era</a>
+          </div>
+        </div>
+
+        <aside class="info-visual-card" aria-hidden="true">
+          <div class="info-visual-frame">
+            <img class="info-visual-image interactive-image" src="./photos/Buddha.png" alt="" />
           </div>
         </aside>
       </section>
 
-      <section class="info-grid">
-        <article class="info-panel">
-          <h2 data-i18n="panel_1_title">Recommended Route</h2>
-          <p data-i18n="panel_1_copy">
-            Start with the Historical Timeline to understand the full chronology. Next, open the
-            Song crypt page for the buried origins of the site, then continue to the Ming
-            reconstruction and finally the present-day museum phase.
+      <section class="info-quick-visit">
+        <div class="info-quick-visit-main">
+          <p class="info-quick-visit-name" data-i18n="quick_name">Nanjing Da Bao'en Temple</p>
+          <p class="info-quick-visit-meta" data-i18n="quick_meta">4.6/5 · 520 reviews</p>
+          <p class="info-quick-visit-line">
+            <span class="info-quick-visit-label" data-i18n="quick_hours_label">Hours:</span>
+            <span data-i18n="quick_hours_value">09:00-17:30</span>
           </p>
+          <p class="info-quick-visit-line">
+            <span class="info-quick-visit-label" data-i18n="quick_address_label">Address:</span>
+            <span data-i18n="quick_address_value">No. 1 Bao'en Street, Qinhuai District, Nanjing</span>
+          </p>
+        </div>
+
+        <div class="info-quick-visit-side">
+          <button class="info-quick-book" type="button" data-i18n="quick_book">Book</button>
+        </div>
+      </section>
+
+      <section class="info-essentials-grid">
+        <article class="info-panel info-panel-tall">
+          <p class="info-panel-label" data-i18n="panel_1_label">Section Preview</p>
+          <h2 data-i18n="panel_1_title">Opening Information</h2>
         </article>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_2_title">Quick Access</h2>
-          <ul class="info-link-list">
-            <li><a href="./index.html" data-i18n="link_timeline">Interactive Historical Timeline</a></li>
-            <li><a href="./era.html?era=ancient" data-i18n="link_ancient">Underground Palace and Reliquary</a></li>
-            <li><a href="./era.html?era=classical" data-i18n="link_classical">Imperial Reconstruction</a></li>
-            <li><a href="./era.html?era=present" data-i18n="link_present">Ruins Museum</a></li>
-          </ul>
+        <article class="info-panel info-panel-map">
+          <p class="info-panel-label" data-i18n="panel_2_label">Section Preview</p>
+          <h2 data-i18n="panel_2_title">Map</h2>
+          <div class="info-map-preview info-map-preview-live">
+            <div class="visitor-map-toolbar" aria-label="Map layers"></div>
+            <div
+              id="visitor-leaflet-map"
+              class="visitor-leaflet-map"
+              role="application"
+              aria-label="Interactive map of Da Bao'en Temple and nearby visitor points"
+            ></div>
+          </div>
         </article>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_3_title">Visitor Prompts</h2>
-          <p data-i18n="panel_3_copy">
-            Encourage users to compare what is visible above ground with what survives below ground,
-            and to think about how a lost monument can continue through excavation, reconstruction,
-            and exhibition design.
-          </p>
+        <article class="info-panel info-panel-access">
+          <p class="info-panel-label" data-i18n="panel_3_label">Section Preview</p>
+          <h2 data-i18n="panel_3_title">Accessibility</h2>
         </article>
+      </section>
 
-        <article class="info-panel">
-          <h2 data-i18n="panel_4_title">Future Expansion</h2>
-          <p data-i18n="panel_4_copy">
-            This page can later hold ticketing, opening information, maps, accessibility notes, or
-            gallery highlights. For now it works as a clean navigation layer that does not alter the
-            timeline page’s existing structure.
-          </p>
+      <section class="info-exhibition-section">
+        <article class="info-panel info-panel-exhibition">
+          <p class="info-panel-label" data-i18n="panel_4_label">Section Preview</p>
+          <h2 data-i18n="panel_4_title">Contemporary Exhibition Highlights</h2>
           <p class="info-note" data-i18n="panel_4_note">
-            Current safe scope: page-level navigation only, with no changes to your 3D rendering or
-            existing timeline interactions.
+            Reserved at the bottom for future image hosting blocks.
           </p>
+          <div class="info-gallery-reserve" aria-hidden="true">
+            <div class="info-gallery-slot">
+              <img class="info-gallery-image interactive-image" src="./photos/contemporary/con1.jpg" alt="" />
+            </div>
+            <div class="info-gallery-slot">
+              <img class="info-gallery-image interactive-image" src="./photos/contemporary/con2.jpg" alt="" />
+            </div>
+            <div class="info-gallery-slot">
+              <img class="info-gallery-image interactive-image" src="./photos/contemporary/con3.jpg" alt="" />
+            </div>
+          </div>
         </article>
       </section>
     </main>
 
-    <script src="lang-visitor-experience.js"></script>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- left side links -->
+        <div class="footer-left">
+          <a href="./index.html" class="footer-logo">
+            <img src="./assets/Logo-wordmark.png" alt="Logo for home page"/>
+          </a>
+
+          <div class="footer-links">
+            <a href="./sources.html">Sources</a>
+            <a href="./contact.html">Contact</a>   
+          </div>
+        </div>
+
+        <!-- right side links --> 
+        <div class="footer-social">
+          <a href="https://www.facebook.com/" aria-label="Facebook">
+            <img src="./assets/icon-fb.svg" alt="Facebook icon"/>
+          </a>
+
+          <a href="https://www.instagram.com/" aria-label="Instagram">
+            <img src="./assets/icon-insta.svg" alt="Instagram icon"/>
+          </a>
+
+          <a href="https://www.pinterest.com/" aria-label="Pinterest">
+            <img src="./assets/icon-pinterest.svg" alt="Pinterest icon"/>
+          </a>
+
+          <a href="https://www.youtube.com/" aria-label="YouTube">
+            <img src="./assets/icon-youtube.svg" alt="YouTube icon"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="lang-visitor-experience.js?v=20260327b"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="visitor-map.js?v=20260326a"></script>
+    <script src="image-lightbox.js?v=20260327b"></script>
   </body>
 </html>

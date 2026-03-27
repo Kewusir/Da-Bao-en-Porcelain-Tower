@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { OBJLoader } from "./assets/OBJLoader.js";
 
 const canvas = document.querySelector("#tower-canvas");
+const pageBody = document.body;
 const sceneWrap = document.querySelector(".scene-wrap");
 const sceneStatus = document.querySelector("#scene-status");
 const transitionScreen = document.querySelector("#transition-screen");
@@ -24,14 +25,14 @@ const eras = [
   },
   {
     id: "medieval",
-    color: "#a98d5d",
+    color: "#7c5cff",
     towerT: 0.5,
     hover: { x: THREE.MathUtils.degToRad(4), y: 0 },
     view: { x: 0.06, y: 0.02, zoom: 1.01 }
   },
   {
     id: "classical",
-    color: "#d0a85a",
+    color: "#3fbf6f",
     towerT: 0.31,
     hover: { x: THREE.MathUtils.degToRad(7), y: THREE.MathUtils.degToRad(8) },
     view: { x: 0.12, y: 0.08, zoom: 1.02 }
@@ -72,6 +73,14 @@ const focusBands = [];
 const loader = new OBJLoader();
 const clock = new THREE.Clock();
 let scrollAnimationFrame = 0;
+
+window.setTimeout(() => {
+  pageBody?.classList.add("is-ready");
+}, 80);
+
+window.setTimeout(() => {
+  pageBody?.classList.add("intro-done");
+}, 2100);
 
 if (location.protocol === "file:") {
   showSceneStatus("Please run this page with a local server. file:// blocks module and OBJ loading.");
