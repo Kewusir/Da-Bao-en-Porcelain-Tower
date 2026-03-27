@@ -99,5 +99,134 @@
       </div>
     </footer>
     
+    <script>
+  (function () {
+    const translations = {
+      en: {
+        title: "A Wonder Known Across the World | Great Bao'en Temple",
+        back: "Back to timeline",
+        kicker: "from the 15th to the 19th centuries",
+        hero: "A Wonder Known Across the World",
+        intro:
+          "A reading of the monument’s fame, circulation, and long afterlife in visual culture.",
+        overviewTitle: "Overview",
+        overviewCopy:
+          "The glazed pagoda of Nanjing became one of the city’s most iconic landmarks and was widely celebrated in travel writing, sketches, and historical imagination.",
+        caption1:
+          "Illustration of the Porcelain Tower, drawn by Johan Nieuhof circa 1665. The tower was the centerpiece of the Great Bao'en Temple Complex.",
+        significanceTitle: "Historical Significance",
+        significanceCopy:
+          "Great Bao'en Temple moved from local sacred architecture to an international image. The tower’s fame shaped how outsiders understood Chinese monumental architecture and contributed to its legendary status.",
+        caption2:
+          "A capriccio with the French Ambassador approaching the King of Siam's Palace in a state barge, in October 1685. Private Collection.",
+        spatialTitle: "Spatial and Architectural Reading",
+        spatialCopy:
+          "Its appeal came from height, symmetry, and luminous glazed surfaces. The monument stood not only as a religious tower but also as a carefully staged urban spectacle.",
+        caption3:
+          "The Porcelain Tower of Nanking, Plate 12 from 'Entwurf einer historischen Architektur', Engraved by Johann Adam Delsenbach, 1721.",
+        archiveTitle: "Visual Archive",
+        archivePlaceholder: "Place period image here",
+        memoryTitle: "Memory and Legacy",
+        memoryCopy:
+          "Even after destruction, the image of the Porcelain Tower continued to circulate as a shorthand for refinement, imperial ambition, and the fragility of cultural splendor.",
+        sources: "Sources",
+        contact: "Contact"
+      },
+      zh: {
+        title: "闻名世界的奇观 | 大报恩寺",
+        back: "返回时间线",
+        kicker: "15世纪至19世纪",
+        hero: "闻名世界的奇观",
+        intro:
+          "这是对这座纪念性建筑如何获得盛名、传播并在视觉文化中长期存续的一种解读。",
+        overviewTitle: "概述",
+        overviewCopy:
+          "南京琉璃塔成为这座城市最具标志性的地标之一，并在游记、素描与历史想象中被广泛赞颂。",
+        caption1:
+          "约翰·尼霍夫于约1665年绘制的琉璃塔插图。此塔是大报恩寺建筑群的核心。",
+        significanceTitle: "历史意义",
+        significanceCopy:
+          "大报恩寺从地方性的宗教建筑转变为一种国际性的图像符号。琉璃塔的名声塑造了外界理解中国纪念性建筑的方式，并促成了其传奇地位。",
+        caption2:
+          "《1685年10月法国使节乘国王驳船接近暹罗王宫的随想画》。私人收藏。",
+        spatialTitle: "空间与建筑解读",
+        spatialCopy:
+          "它的吸引力来自高度、对称性以及发光般的琉璃表面。这座纪念物不仅是一座宗教塔，更是一场被精心塑造的城市景观秀。",
+        caption3:
+          "《南京琉璃塔》，出自《历史建筑设计》，第12图版，Johann Adam Delsenbach 雕版，1721年。",
+        archiveTitle: "视觉档案",
+        archivePlaceholder: "此处放置时代图像",
+        memoryTitle: "记忆与遗产",
+        memoryCopy:
+          "即使在毁坏之后，琉璃塔的形象仍持续传播，成为精致、帝国雄心以及文化辉煌脆弱性的象征性缩写。",
+        sources: "资料来源",
+        contact: "联系方式"
+      }
+    };
+
+    const lang = localStorage.getItem("dabaoen-lang") || "en";
+    const dict = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = dict.title;
+
+    const textCards = document.querySelectorAll(".era-text-card");
+    const captions = document.querySelectorAll(".era-caption");
+    const footerLinks = document.querySelectorAll(".footer-links a");
+    const panels = document.querySelectorAll(".era-panel");
+
+    const back = document.querySelector(".era-back");
+    const kicker = document.querySelector(".era-kicker");
+    const hero = document.querySelector(".era-title");
+    const intro = document.querySelector(".era-intro-copy");
+    const archiveTitle = document.querySelector(".era-section-title");
+    const archivePlaceholder = document.querySelector(".era-wide-frame");
+
+    if (back) back.textContent = dict.back;
+    if (kicker) kicker.textContent = dict.kicker;
+    if (hero) hero.textContent = dict.hero;
+    if (intro) intro.textContent = dict.intro;
+
+    if (textCards[0]) {
+      const h2 = textCards[0].querySelector("h2");
+      const p = textCards[0].querySelector("p");
+      if (h2) h2.textContent = dict.overviewTitle;
+      if (p) p.textContent = dict.overviewCopy;
+    }
+
+    if (captions[0]) captions[0].textContent = dict.caption1;
+
+    if (textCards[1]) {
+      const h2 = textCards[1].querySelector("h2");
+      const p = textCards[1].querySelector("p");
+      if (h2) h2.textContent = dict.significanceTitle;
+      if (p) p.textContent = dict.significanceCopy;
+    }
+
+    if (captions[1]) captions[1].textContent = dict.caption2;
+
+    if (textCards[2]) {
+      const h2 = textCards[2].querySelector("h2");
+      const p = textCards[2].querySelector("p");
+      if (h2) h2.textContent = dict.spatialTitle;
+      if (p) p.textContent = dict.spatialCopy;
+    }
+
+    if (captions[2]) captions[2].textContent = dict.caption3;
+    if (archiveTitle) archiveTitle.textContent = dict.archiveTitle;
+    if (archivePlaceholder) archivePlaceholder.textContent = dict.archivePlaceholder;
+
+    if (panels[0]) {
+      const h2 = panels[0].querySelector("h2");
+      const p = panels[0].querySelector("p");
+      if (h2) h2.textContent = dict.memoryTitle;
+      if (p) p.textContent = dict.memoryCopy;
+    }
+
+    if (footerLinks[0]) footerLinks[0].textContent = dict.sources;
+    if (footerLinks[1]) footerLinks[1].textContent = dict.contact;
+  })();
+</script>
+    
   </body>
 </html>
