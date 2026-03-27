@@ -8,11 +8,11 @@ const translations = {
     kicker: "Learn More",
     title: "Visualizing the Dabao’en Temple",
     lead:
-      "This page extends the historical timeline with background on the temple’s layered history, the Ming reconstruction, and the modern museum site. It works as a secondary navigation page without changing the 3D timeline on the mainpage.",
+      "Your journey through the Great Bao'en Temple begins here. Click the Timeline above to explore the stories of different eras and be guided through an immersive experience of history, architecture, and cultural memory.",
     side_label: "Start Here",
-    side_title: "Use the timeline as the primary entry point.",
+    side_title: "Start your journey through the timeline.",
     side_copy:
-      "Return to the Historical Timeline for the 3D tower and era navigation, then use the links below to move into deeper reading.",
+      "Click the Historical Timeline to explore different eras of the Great Bao'en Temple and discover how its story unfolds across time.",
     button_timeline: "Open Historical Timeline",
     button_ming: "Open Ming Era Page",
     panel_1_title: "Historical Layers",
@@ -28,10 +28,10 @@ const translations = {
     link_present: "Ruins Museum and Rebuilt Pagoda",
     panel_3_title: "Spatial Reading",
     panel_3_copy:
-      "The project can be framed around three spatial ideas: the vertical monument of the pagoda, the buried continuity of the underground palace, and the museum as a curated interface between archaeology and public memory.",
+      "Through the timeline, you can better understand the Great Bao'en Temple from multiple perspectives, including its architecture, historical layers, reconstruction, and cultural legacy.",
     panel_4_title: "Research Use",
     panel_4_copy:
-      "This navigation page is useful for readers who want context first before exploring the interactive timeline. It can later be expanded with citations, archival images, maps, or a glossary without disturbing the mainpage.",
+      "This page offers supporting background for readers who want to understand the site more fully before or after exploring the interactive timeline.",
     panel_4_note:
       "Safe extension point: add more panels here later instead of rewriting the historical timeline homepage."
   },
