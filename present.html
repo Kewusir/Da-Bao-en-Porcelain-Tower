@@ -28,6 +28,7 @@
                 class="interactive-image"
                 src="./photos/contemporary/1.jpg"
                 alt="Interior view of the present-day museum."
+                data-lightbox-src="./photos/contemporary/1.jpg"
                 data-lightbox-title="Image 1"
                 data-lightbox-description="Interior museum view with contemporary exhibition lighting and display atmosphere."
               />
@@ -43,6 +44,7 @@
                 class="interactive-image"
                 src="./photos/contemporary/2.jpeg"
                 alt="Daytime view of the rebuilt pagoda and museum site."
+                data-lightbox-src="./photos/contemporary/2.jpeg"
                 data-lightbox-title="Image 2"
                 data-lightbox-description="Daytime aerial-style view of the rebuilt pagoda and the surrounding museum complex."
               />
@@ -272,11 +274,13 @@
     }
 
     if (image1) {
+      image1.dataset.lightboxSrc = "./photos/contemporary/1.jpg";
       image1.dataset.lightboxTitle = dict.lightbox1Title;
       image1.dataset.lightboxDescription = dict.lightbox1Desc;
     }
 
     if (image2) {
+      image2.dataset.lightboxSrc = "./photos/contemporary/2.jpeg";
       image2.dataset.lightboxTitle = dict.lightbox2Title;
       image2.dataset.lightboxDescription = dict.lightbox2Desc;
     }
