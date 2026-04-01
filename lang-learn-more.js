@@ -8,7 +8,7 @@ const translations = {
     kicker: "Learn More",
     title: "Visualizing the Dabao’en Temple",
     lead:
-      "Your journey through the Great Bao'en Temple begins here. Click the Timeline above to explore the stories of different eras and be guided through an immersive experience of history, architecture, and cultural memory.",
+      "Your journey through the Great Bao'en Temple begins here. Explore the stories of different eras and be guided through an immersive experience of history, architecture, and cultural memory.",
     side_label: "Start Here",
     side_title: "Start your journey through the timeline.",
     side_copy:

@@ -328,6 +328,7 @@ body::before {
   font-weight: 700;
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease;
+  text-decoration: none;
 }
 
 .info-quick-book:hover {

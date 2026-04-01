@@ -24,7 +24,7 @@ const translations = {
     panel_3_copy:
       "The site offers basic accessible visiting conditions and is generally suitable for elderly visitors, wheelchair users, visitors using mobility aids, and families with strollers. Public transport and metro connections are available nearby, but metro exits usually still require some walking, so buses or direct taxi and ride-hailing drop-off are recommended for visitors with reduced mobility. Visitors with disabilities and adults aged 70 and above may enter free with valid identification. For barrier-free entrances, wheelchair borrowing, accessible restrooms, elevator access, and priority entry arrangements, it is best to confirm details in advance by calling the visitor center at 025-52009999.",
     panel_4_title: "Contemporary Exhibition Highlights",
-    panel_4_note: "Reserved at the bottom for future image hosting blocks."
+    panel_4_note: "A selection of photos from the current temple site, showcasing a blend of historical architecture and modern-day visitor experience. Click on any image to view it in a larger format."
   },
   zh: {
     _title: "访客体验 | 大报恩寺",
